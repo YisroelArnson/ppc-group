@@ -1,16 +1,16 @@
 $(function() {
-  mobileNav(200);
+  mobileNav();
   checkContent();
 });
 
 
 
-function mobileNav(duration) {
-  var $mobileContainer = $('.mobile-nav');
+function mobileNav() {
+  var $linkContainer = $('.link-container');
   var $x = $('.x');
 
   $x.click(function() {
-    $mobileContainer.toggle(duration);
+    $linkContainer.toggleClass('link-container-open');
   });
 }
 
@@ -26,7 +26,7 @@ function checkContent() {
     var $secondClass = $this.attr("class").split(' ');
     var $thisContent = $secondClass[2] + '-' + $secondClass[3];
 
-    $button.css('background-color', '#3D8EB9');
+    $button.css('background-color', '#2980b9');
     $this.css('background-color', '#2ecc71');
     $('.content').slideUp();
     $('.' + $thisContent).slideDown();
