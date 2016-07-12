@@ -293,7 +293,7 @@ nav {
 
 /*whitespace*/
 .whitespace-container {
-  background-color: #f6f6f6;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -333,6 +333,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   margin: 0 100px 100px 100px;
+  background-color: #f6f6f6;
   box-shadow: inset 0 0 2px 2px #aaa;
 }
 
