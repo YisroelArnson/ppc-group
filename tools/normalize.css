@@ -434,3 +434,12 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+
+/**
+ * change list style type t0 none.
+ */
+
+li {
+  list-style-type: none;
+}

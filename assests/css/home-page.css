@@ -37,7 +37,19 @@ nav {
   display: block;
 }
 
-nav a {
+.drop-links {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #3498db;
+  transition: all 0.3s;
+}
+
+.drop-links:hover {
+  color: #aaa
+}
+
+.main-links {
   font-size: 20px;
   padding: 30px 20px;
   color: #3498db;
@@ -98,9 +110,8 @@ nav a {
 /*banner*/
 .banner {
   height: 450px;
-  background-image: url('https://static.pexels.com/photos/6758/wildernessculture-rei1440project-welltravelled-awesomeearth-large.jpg');
+  background-image: url('C:/Users/Yisroel/AppData/Local/atom/app-1.8.0/code/ppc-website-1/tools/images/photodune-3329290-mountain-range-l.jpg');
   background-size: cover;
-  background-position: bottom;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -139,7 +150,6 @@ nav a {
 
 
 /*animated logo*/
-
 .main-animated-logo-container {
   background-image: radial-gradient(#3498db, #2980b9);
   display: flex;
@@ -174,7 +184,6 @@ nav a {
 }
 .logo-text-container li {
   padding: 5px 20px;
-  list-style-type: none;
   color: #fff;
   transition: all 0.2s;
 }
@@ -186,9 +195,78 @@ nav a {
 }
 
 .logo-text-container li:before {
-  content: '\203A';
+  content: "+";
 }
 /*animated logo~*/
+
+
+
+
+
+
+
+
+
+
+/*parallax section*/
+.parallax-container {
+  width: 100%;
+  background-image: url('C:/Users/Yisroel/AppData/Local/atom/app-1.8.0/code/ppc-website-1/tools/images/photodune-11887350-vernazza-village-aerial-view-on-sunset-l.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parallax-content {
+  display: flex;
+  margin: 100px;
+}
+
+.parallax-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.parallax-gif {
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.parallax-text h1 {
+  color: #fff;
+  font-size: 40px;
+  width: 400px;
+}
+
+.parallax-text p {
+  color: #fff;
+  font-size: 20px;
+  width: 400px;
+}
+
+/*parallax section~*/
+
+
+
+
+
+
+
+
 
 
 
@@ -223,6 +301,9 @@ nav a {
   transition: all 0.5s;
 }
 
+.button-1 {
+  background-color: #2ecc71;
+}
 .button:hover {
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.23);
@@ -259,6 +340,7 @@ nav a {
   color: #7f8c8d;
   font-size: 30px;
   line-height: 2;
+  margin: 0 50px;
 }
 
 .content-container-2, .content-container-3 {
