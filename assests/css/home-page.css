@@ -1,3 +1,5 @@
+
+
 /*navbar*/
 nav {
   position: fixed;
@@ -111,7 +113,7 @@ nav {
 .banner {
   width: 100%;
   height: 450px;
-  background-image: url('C:/Users/Yisroel/AppData/Local/atom/app-1.8.0/code/ppc-website-1/tools/images/photodune-3329290-mountain-range-l.jpg');
+  background-image: url('../../tools/images/photodune-3329290-mountain-range-l.jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -209,16 +211,19 @@ nav {
 
 
 
-/*parallax section*/
+/*parallax section-1*/
 .parallax-container {
   width: 100%;
-  background-image: url('C:/Users/Yisroel/AppData/Local/atom/app-1.8.0/code/ppc-website-1/tools/images/photodune-772431-panorama-mountains-l.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.parallax-container-1 {
+  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
 }
 
 .parallax-content-container {
@@ -275,7 +280,7 @@ nav {
   }
 
 }
-/*parallax section~*/
+/*parallax section-1~*/
 
 
 
@@ -293,7 +298,7 @@ nav {
 
 /*whitespace*/
 .whitespace-container {
-  background-color: #fff;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -333,16 +338,11 @@ nav {
   justify-content: center;
   flex-direction: column;
   margin: 0 100px 100px 100px;
-  background-color: #f6f6f6;
-  box-shadow: inset 0 0 2px 2px #aaa;
+  background-image: radial-gradient(#3498db, #2980b9);
+  box-shadow: inset 0 0 0px 4px #ddd;
 }
 
-.seperator {
-  width: 75%;
-  height: 2px;
-  margin: 50px 0;
-  background-color: #eee;
-}
+
 
 .title {
   display: flex;
@@ -350,12 +350,12 @@ nav {
   justify-content: center;
   flex-direction: column;
   font-size: 80px;
-  color: #3D8EB9;
+  color: #fff;
 }
 
 .paragraph {
   text-align: center;
-  color: #7f8c8d;
+  color: #f1f1f1;
   font-size: 30px;
   line-height: 2;
   margin: 0 50px;
@@ -365,3 +365,25 @@ nav {
   display: none;
 }
 /*whitespace~*/
+
+
+
+
+
+
+
+/*parallax section-2*/
+.parallax-container-2 {
+  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
+}
+/*parallax section-2~*/
+
+
+
+
+
+/*parallax section-3*/
+.parallax-container-3 {
+  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
+}
+/*parallax section-3~*/
