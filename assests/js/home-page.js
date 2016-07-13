@@ -10,7 +10,7 @@ function mobileNav() {
   var $x = $('.x');
 
   $x.click(function() {
-    $linkContainer.toggleClass('link-container-open');
+    $linkContainer.toggleClass('nav-open');
   });
 }
 

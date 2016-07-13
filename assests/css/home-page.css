@@ -4,70 +4,52 @@
 nav {
   position: fixed;
   width: 100%;
+  z-index: 150;
   display: flex;
   justify-content: space-between;
-  height: 100px;
   background-color: rgba(246, 246, 246, 1);
-  z-index: 150;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
-
 }
 
-.link-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.drop-down-container {
-  position: relative;
+nav a {
   display: inline-block;
-}
-
-.drop-down-content {
-  display: none;
-  position: absolute;
-  text-align: center;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 10px 20px;
-  z-index: 1;
-}
-
-.drop-down-container:hover .drop-down-content {
-  display: block;
-}
-
-.drop-links {
-  display: block;
-  text-align: center;
-  padding: 10px;
   color: #3498db;
-  transition: all 0.3s;
-}
-
-.drop-links:hover {
-  color: #aaa
-}
-
-.main-links {
   font-size: 20px;
-  padding: 30px 20px;
-  color: #3498db;
-  transition: all 0.3s;
+  padding: 15px;
 }
 
-.main-links:hover {
-  color: #fff;
+nav a:hover {
   background-color: #3498db;
+  color: #fff;
+}
+
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .x {
   display: none;
   position: fixed;
-  right: 0;
-  margin: 20px;
+  top: 20;
+  right: 20;
   color: #555;
   font-size: 50px;
   z-index: 150;
@@ -78,34 +60,6 @@ nav {
   cursor: pointer;
   transform: rotate(45deg);
 }
-
-@media (max-width: 1200px) {
-  .x {display: block;}
-
-  .link-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 25%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-  }
-
-  .link-container-open {
-    display: flex;
-    right: 0;
-  }
-  .link-container a {
-    padding: 25px 20px;
-    font-size: 2vw;
-  }
-}
-
-
 /*navbar~*/
 
 
@@ -123,11 +77,12 @@ nav {
 }
 
 .banner h1 {
-  font-size: 7.5vw;
+  font-size: 8.5vw;
   color: #fff;
   display: inline-block;
   border-bottom: 2px solid #eee;
 }
+
 
 .banner h2 {
   color: #ecf0f1;
@@ -138,7 +93,7 @@ nav {
 
 /*business phrase*/
 .business-phrase-container {
-  height: 250px;
+  height: 200px;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -163,14 +118,14 @@ nav {
 .animated-logo-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 
 .logo-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 50px;
+  flex: 1 1 300px;
+  margin: 20px 0;
 }
 
 .gif {
@@ -185,6 +140,7 @@ nav {
   font-weight: 700;
   padding: 10px 10px;
 }
+
 .logo-text-container li {
   padding: 5px 20px;
   color: #fff;
@@ -203,82 +159,65 @@ nav {
 /*animated logo~*/
 
 
-
-
-
-
-
-
-
-
 /*parallax section-1*/
 .parallax-container {
-  width: 100%;
+  max-width: 100%;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .parallax-container-1 {
   background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
 }
 
-.parallax-content-container {
+.main-parallax-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.parallax-col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.parallax-content-container-1 {
-    text-align: right;
-}
-
-.parallax-gif-container {
+.parallax-col li {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.parallax-gif {
-  width: 250px;
-  height: 250px;
-  border-radius: 100%;
-  background-color: #fff;
+  justify-content: center;
+  margin: 50px;
 }
 
 .parallax-content {
-  margin: 100px;
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 5px 25px;
+}
+
+.right {
+  text-align: right;
 }
 
 .parallax-content h1 {
   color: #fff;
-  font-size: 40px;
-  width: 400px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-.parallax-content p {
-  color: #fff;
-  font-size: 20px;
-  width: 400px;
+.parallax-content h3 {
+  color: #f9f9f9;
 }
 
-
-@media (max-width: 1500px) {
-  .parallax-gif-container {
-    width: 100%;
-  }
-
-  .parallax-content {
-    margin: 20px;
-    text-align: center;
-  }
-
+.parallax-gif {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
 }
 /*parallax section-1~*/
 
@@ -298,11 +237,12 @@ nav {
 
 /*whitespace*/
 .whitespace-container {
-  background-color: #f6f6f6;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f6f6f6;
 }
 
 .button-container {
@@ -313,9 +253,8 @@ nav {
 
 .button {
   text-align: center;
-  width: 200px;
-  padding: 10px 0;
-  margin: 0 10px;
+  width: 30%;
+  padding: 20px 0;
   color: #fff;
   font-weight: 700;
   background-color: #3498db;
@@ -332,24 +271,22 @@ nav {
 }
 
 .main-content-container {
+  max-width: 80%;
   min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 100px 100px 100px;
+  margin: 0 50px 50px 50px;
   background-image: radial-gradient(#3498db, #2980b9);
-  box-shadow: inset 0 0 0px 4px #ddd;
+  box-shadow: inset 0 0 3px 5px rgba(0,0,0,0.2);
 }
 
 
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 80px;
+  font-size: 65px;
+  text-align: center;
   color: #fff;
 }
 
@@ -357,7 +294,7 @@ nav {
   text-align: center;
   color: #f1f1f1;
   font-size: 30px;
-  line-height: 2;
+  line-height: 1.5;
   margin: 0 50px;
 }
 
@@ -369,21 +306,113 @@ nav {
 
 
 
-
-
-
-/*parallax section-2*/
-.parallax-container-2 {
-  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
+/*media queries*/
+@media (max-width: 1200px) {
+/*nav*/
+  nav a {
+    padding: 30px 5px;
+  }
+/*nav*/
 }
-/*parallax section-2~*/
+
+@media (max-width: 1024px) {
+/*nav*/
+  .x {display: block;}
+  nav {height: 75px;}
+
+  .link-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f6f6f6;
+    min-width: 200px;
+    width: 20%;
+    height: 100%;
+  }
+
+  .nav-open {
+    right: -100%;
+  }
+
+  .link-container a {
+    display: block;
+    font-size: 15px;
+    padding: 20px;
+  }
+/*nav*/
 
 
-
-
-
-/*parallax section-3*/
-.parallax-container-3 {
-  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
+/*parallax section-1*/
+.main-parallax-container {
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-/*parallax section-3~*/
+
+.parallax-col li {
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.parallax-content {
+  text-align: center;
+}
+
+.parallax-gif {
+  order: -1;
+}
+/*parallax section-1~*/
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+/*animated logo*/
+  .logo-container {
+    justify-content: center;
+  }
+
+  .logo-text-container {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .logo-text-container h1 {
+    padding: 0;
+    font-size: 25px;
+
+  }
+/*animated logo~*/
+
+
+/*whitespace*/
+  .button-container {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-content-container {
+    max-width: 100%;
+    min-height: 600px;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 25px;
+    line-height: 1;
+    margin: 0;
+  }
+/*whitespace~*/
+}
+
+/*media queries~*/

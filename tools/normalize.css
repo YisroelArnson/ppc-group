@@ -437,9 +437,16 @@ textarea {
 
 
 /**
- * change list style type t0 none.
+ * change list style type to none.
  */
 
 li {
   list-style-type: none;
+}
+
+/**
+ * Removed padding on ul element.
+ */
+ul {
+  padding: 0;
 }
