@@ -344,7 +344,7 @@ nav a:hover {
 
 
 
-
+/*prallax*/
 
 .parallax-container video {
   min-width: 100%;
@@ -361,11 +361,71 @@ nav a:hover {
     background-image: url('../../tools/images/2016-07-13_13-45-34-Comp.jpg');
 }
 
+/*parallax~*/
 
 
+/*text-section*/
+.text-section-container {
+  min-width: 100%;
+  min-height: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+}
+
+.text-section-container h1 {
+  text-align: center;
+  color: #444;
+  font-weight: 300;
+  font-size: 40px;
+  padding: 1em 0;
+}
+
+.text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-section p {
+  column-count: 2;
+  color: #555;
+  font-size: 18px;
+  width: 35%;
+  line-height: 1.75;
+}
+
+.text-section div {
+  display: flex;
+  justify-content: center;
+}
+
+.text-section ul {
+  padding: 30px;
+  font-size: 25px;
+  color: #555;
+}
+
+.text-section li {
+  margin: 5px 40px;
+  list-style-type: square;
+}
 
 
+.text-section-gif {
+  width: 300px;
+  height: 200px;
+  margin-left: 50px;
 
+}
+
+.text-section-gif-1 {
+  background-image: url('../../tools/gifs/landing-page.gif');
+  background-position: center;
+  background-size: cover;
+}
+
+/*text-section~*/
 
 
 
