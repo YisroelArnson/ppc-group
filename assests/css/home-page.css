@@ -1,4 +1,6 @@
-
+* {
+  /*font-family: 'Oswald', sans-serif;*/
+}
 
 /*navbar*/
 nav {
@@ -11,9 +13,20 @@ nav {
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
+.ppc-title {
+  font-size: 12px;
+  color: #666;
+  margin-left: 2%;
+}
+
+nav h1 {
+  border-bottom: 2px solid #3498db;
+}
+
+
 nav a {
   display: inline-block;
-  color: #3498db;
+  color: #666;
   font-size: 20px;
   padding: 15px;
 }
@@ -65,52 +78,59 @@ nav a:hover {
 
 /*banner*/
 .banner {
-  width: 100%;
-  min-height: 700px;
-  background-image: url('../../tools/images/2016-07-13_13-30-52 -Comp.jpg');
+  max-width: 100%;
+  min-height: 625px;
+  background-image: url('../../tools/images/ppc-image-edit.jpg');
   background-size: cover;
-  background-attachment: fixed;
+
   background-position: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.banner h1 {
-  font-size: 7vw;
   color: #fff;
-  display: inline-block;
-  border-bottom: 2px solid #eee;
 }
 
 
-.banner h2 {
-  color: #ecf0f1;
-  font-size: 3.5vw;
+.ppc-catch-phrase {
+  display: block;
+  padding: 250px 40px;
+}
+
+.ppc-catch-phrase h1 {
+  font-size: 30px;
+  line-height: 2;
+}
+#padding-left{
+  padding-left: 50px;
 }
 /*banner*/
 
 
 /*business phrase*/
 .business-phrase-container {
-  height: 200px;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #444;
-  font-size: 2vw;
-  border-bottom: 2px solid #666;
+  background-color: #f6f6f6;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  padding: 1em;
+  border-bottom: 1px solid #666;
 }
 /*business phrase~*/
 
 
 
-
 /*animated logo*/
-.main-animated-logo-container {
+.animated-logo {
   background-image: radial-gradient(#2980b9, #004C8F);
+}
+
+.animated-logo .title, .animated-logo .paragraph{
+  color: #fff;
+  text-align: center;
+}
+
+.animated-logo .seperator {
+    background-color: #fff;
+}
+
+.main-animated-logo-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -128,6 +148,7 @@ nav a:hover {
   flex-wrap: wrap;
   margin: 20px 0;
   flex: 1 1 200px;
+  cursor: pointer;
 }
 
 .logo-gif {
@@ -149,7 +170,6 @@ nav a:hover {
 }
 
 .logo-text-container li:hover {
-  cursor: pointer;
   padding: 5px 25px;
   color: #ddd;
 }
@@ -163,6 +183,7 @@ nav a:hover {
 /*parallax section-1*/
 .parallax-container {
   max-width: 100%;
+  min-height:600px;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -173,96 +194,81 @@ nav a:hover {
 }
 
 .parallax-container-1 {
-  background-image: url('../../tools/images/2016-07-11_20-39-33 -Comp2.jpg');
+  background-image: url('../../tools/images/photodune-772431-panorama-mountains-l.jpg');
 }
 
 .main-parallax-container {
+  max-width: 1200px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  max-width: 1000px;
 }
 
-.parallax-col {
-  display: flex;
-  flex-direction: column;
-}
 
-.parallax-col li {
+.main-parallax-container li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25px 50px;
-  cursor: pointer;
-}
-
-.parallax-content {
-  display: flex;
   flex-direction: column;
-  width: 80%;
+  cursor: pointer;
+  margin: .75em 0;
 }
 
-.right {
-  text-align: right;
-}
 
 .parallax-content h1 {
   color: #fff;
   font-weight: 500;
-}
-
-.parallax-content h3 {
-  color: #f9f9f9;
-  font-weight: 100;
+  text-align: center;
 }
 
 .parallax-gif {
   margin: 0 10px;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
   border-radius: 100%;
 }
 
 .parallax-content-box {
-  max-width: 700px;
-  margin: 50px 0;
-  padding: 25px 0;
+  width: 720px;
+  height: 200px;
+  overflow: hidden;
+  margin: 50px 10px;
   border: 1px solid #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.parallax-content-container {
+.parallax-slide-container {
+  display: block;
+  position: relative;
   text-align: center;
+  width: 6000px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax-content-box .parallax-content-container {
+  position: absolute;
+  list-style-type: none;
+  max-width: 720px;
+  height: 200px;
 }
 
 .parallax-content-container h1 {
   color: #fff;
-  font-size: 40px;
 }
 
 .parallax-content-container p {
-  padding: 0 10%;
+  margin: 0 5em;
   color: #fff;
-  font-size: 30px;
+  font-size: 18px;
 }
-
-.parallax-content-container-2, .parallax-content-container-3, .parallax-content-container-4 {
-  display: none;
-}
-
-
 /*parallax section-1~*/
 
-
-
-
-
-
-
-
+/*prallax-2*/
+.parallax-container-2 {
+  background-image: url('../../tools/images/landscape-mountains-nature-lake.jpeg');
+}
+/*parallax-2~*/
 
 
 
@@ -277,13 +283,14 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #eee;
 }
 
 .button-container {
+  max-width: 90%;
   display: flex;
   justify-content: center;
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 .button {
@@ -291,20 +298,20 @@ nav a:hover {
   width: 30%;
   padding: 20px 0;
   margin: 0 5px;
-  color: #fff;
+  color: #666;
   font-weight: 700;
-  background-color: #004C8F;
-  border-radius: 10px;
-  /*box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);*/
+  background-color: #eee;
+  border: 1px solid #3498db;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
   transition: all 0.2s;
 }
 
 .button-1 {
-  background-color: #2980b9;
+  background-color: #ddd;
 }
 .button:hover {
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.23);
+  box-shadow: 0 2px 6px rgba(0,0,0,.6),0 2px 6px rgba(0,0,0,.23);
 }
 
 .main-content-container {
@@ -314,65 +321,98 @@ nav a:hover {
   justify-content: center;
   flex-direction: column;
   margin: 0 25px 25px 25px;
-  background-image: radial-gradient(#2980b9, #004C8F);
-  box-shadow: inset 0 0 3px 5px rgba(0,0,0,0.2);
-  border-radius: 15px;
+  background-color: #ddd;
+  border: 1px solid #3498db;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.23);
 }
 
 .main-content-container .content {
-  margin: 0 50px;
+  margin: 0 5%;
 }
 
 .title {
-  font-size: 65px;
+  font-size: 40px;
   text-align: center;
-  color: #fff;
+  color: #666;
+}
+
+.seperator {
+  width: 20%;
+  height: 1px;
+  background-color: #3498db;
+}
+
+.logo-paragraph-container {
+  display: flex;
+  align-items: center;
+  margin: .5em;
 }
 
 .paragraph {
-  text-align: center;
-  color: #f1f1f1;
-  font-size: 30px;
-  line-height: 1.5;
+  color: #666;
+  font-size: 20px;
+  line-height: 2;
 }
 
-.content-container-2, .content-container-3 {
+.whitespace-gif {
+    min-width: 25%;
+    min-height: 20%;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../tools/gifs/landing-page.gif');
+}
+
+.whitespace-gif-1 {
+}
+
+.content-container-2, .content-container-3, .content-container-5, .content-container-6  {
   display: none;
 }
 /*whitespace~*/
 
+/*whitespace-2*/
+.whitespace-2 .whitespace-container {
+  background-image: radial-gradient(#1A5DA1, #003F83);
+}
 
+.whitespace-2 .button {
+  color: #fff;
+  background-color: #1A5DA1;
+  border: 1px solid #3498db;
+}
 
+.whitespace-2 .button-1 {
+  background-color: #003F83;
+}
 
-/*prallax*/
+.whitespace-2 .main-content-container {
+  background-color: #1A5DA1;
+}
 
-.parallax-container video {
-  min-width: 100%;
-  min-height: auto;
-  width: auto;
-  height: auto;
-  position: fixed;
-  top:0;
-  z-index: -100;
+.whitespace-2 .title {
+  color: #fff;
+}
+
+.whitespace-2 .seperator {
+  background-color: #fff;
 }
 
 
-.parallax-container-3 {
-    background-image: url('../../tools/images/2016-07-13_13-45-34-Comp.jpg');
+.whitespace-2 .paragraph {
+  color: #fff;
 }
-
-/*parallax~*/
+/*whitespace-2~*/
 
 
 /*text-section*/
-.text-section-container {
+.main-text-section-container {
   min-width: 100%;
   min-height: 400px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
-.text-section-container h1 {
+.text-section-title {
   text-align: center;
   color: #444;
   font-weight: 300;
@@ -380,43 +420,29 @@ nav a:hover {
   padding: 1em 0;
 }
 
+.text-section-container {
+  display: flex;
+  align-items: center;
+}
+
 .text-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
+.text-section h1 {
+  color: #3498db;
+}
 .text-section p {
-  column-count: 2;
   color: #555;
-  font-size: 18px;
-  width: 35%;
-  line-height: 1.75;
+  font-size: 15px;
 }
-
-.text-section div {
-  display: flex;
-  justify-content: center;
-}
-
-.text-section ul {
-  padding: 30px;
-  font-size: 25px;
-  color: #555;
-}
-
-.text-section li {
-  margin: 5px 40px;
-  list-style-type: square;
-}
-
 
 .text-section-gif {
-  width: 300px;
-  height: 200px;
-  margin-left: 50px;
-
+  width: 50%;
+  height: 20%;
+  margin: 1em 2em;
 }
 
 .text-section-gif-1 {
@@ -424,14 +450,7 @@ nav a:hover {
   background-position: center;
   background-size: cover;
 }
-
 /*text-section~*/
-
-
-
-
-
-
 
 
 
@@ -446,6 +465,23 @@ nav a:hover {
     padding: 30px 5px;
   }
 /*nav*/
+/*text-section*/
+  .text-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section-gif {
+    width: 150px;
+  }
+
+  .text-section {
+    text-align: center;
+    width: 60%;
+    margin: 1em;
+  }
+/*text-section~*/
 }
 
 @media (max-width: 1024px) {
@@ -493,6 +529,10 @@ nav a:hover {
   .parallax-gif {
     order: -1;
   }
+
+  .parallax-content-container p {
+    margin: 0;
+  }
 /*parallax section-1~*/
 
 /*animated logo*/
@@ -523,10 +563,15 @@ nav a:hover {
     font-size: 2rem;
   }
 
+  .logo-paragraph-container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
   .paragraph {
     font-size: 25px;
     line-height: 1;
-    margin: 0;
+    margin: .5em 0;
   }
 /*whitespace~*/
 

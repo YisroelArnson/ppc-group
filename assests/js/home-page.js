@@ -7,6 +7,9 @@ $(function() {
 
 
 
+
+
+
 function mobileNav() {
   var $linkContainer = $('.link-container');
   var $x = $('.x');
@@ -19,18 +22,50 @@ function mobileNav() {
 
 
 
+
+
+
+
 function parallaxContent() {
-  var $li = $('.parallax-container').find('li');
-  var $parallaxContentContainer = $('.parallax-content-container');
+  var $parallaxContainer = $('.parallax-container');
+  var $li = $parallaxContainer.find('li');
+  var $contentBox = $parallaxContainer.find($('.parallax-content-box'));
+  var $parallaxSlide = $parallaxContainer.find('.parallax-slide-container');
+  var $parallaxContentContainer = $parallaxContainer.find($('.parallax-content-container'));
+  var width = 720;
+  var animationSpeed = 1000;
+  var pause = 4000;
+  var currentSlide = 1;
+  var interval;
 
-  $li.on('click', function() {
-    var $this = $(this);
-    var $secondClass = $this.attr("class").split(' ');
 
-    $parallaxContentContainer.css('display', 'none');
-    $('.parallax-content-' + $secondClass).fadeIn(500);
+  function startSlider() {
+    interval = setInterval(function() {
+      $parallaxSlide.animate({'margin-left': '-=' + width}, animationSpeed, function() {
+        ++currentSlide
+        if(currentSlide === ($parallaxContentContainer.length - 1)) {
+          currentSlide = 1;
+          $parallaxSlide.css('margin-left', '0');
+        }
+      });
+    }, pause);
+  }
 
-  });
+  function stopSlider() {
+    clearInterval(interval);
+  }
+
+  $parallaxSlide.on('mouseenter', stopSlider).on('mouseleave', startSlider)
+
+  startSlider();
+
+
+  //change font-color as slide changes
+  // on click go to that startSlider
+
+  //make responsive
+
+
 
 
 }
@@ -38,16 +73,35 @@ function parallaxContent() {
 
 
 
-function checkContent() {
-  $button = $('.button');
 
+
+
+
+
+
+
+
+
+
+function checkContent() {
+  var $button = $('.button');
+  var $secondButton = $('.second-button');
   $button.on('click', function() {
     var $this = $(this);
     var $secondClass = $this.attr("class").split(' ');
     var $thisContent = $secondClass[2] + '-' + $secondClass[3];
 
-    $button.css('background-color', '#004C8F');
-    $this.css('background-color', '#2980b9');
+    console.log($thisContent);
+
+    if ($secondClass[4] === 'second-button') {
+      $secondButton.css('background-color', '#1A5DA1');
+      $this.css('background-color', '#003F83');
+    }
+    else {
+    $button.not('.second-button').css('background-color', '#eee');
+    $this.css('background-color', '#ddd');
+    }
+
     $('.content').css('display', 'none');
     $('.' + $thisContent).fadeIn(800);
   });
