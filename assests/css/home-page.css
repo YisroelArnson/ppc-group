@@ -247,9 +247,10 @@ nav a:hover {
 }
 
 .parallax-content-box .parallax-content-container {
-  position: absolute;
-  max-width: 720px;
-  height: 200px;
+  float: left;
+  list-style-type: none;
+  width: 720px;
+  height: 400px;
 }
 
 .parallax-content-container h1 {
