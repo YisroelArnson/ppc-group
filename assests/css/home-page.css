@@ -1,5 +1,5 @@
 * {
-  /*font-family: 'Oswald', sans-serif;*/
+  font-family: 'Oswald', sans-serif;
 }
 
 /*navbar*/
@@ -107,7 +107,7 @@ nav a:hover {
   background-image: radial-gradient(#eee, #ddd);
   text-align: center;
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
   padding: 4em;
   box-shadow: 0 0 5px 6px rgba(0,0,0,.23);
 
@@ -124,6 +124,8 @@ nav a:hover {
 .animated-logo .title, .animated-logo .paragraph{
   color: #fff;
   text-align: center;
+  padding-top: 5px;
+  font-size: 20px;
 }
 
 .animated-logo .seperator {
@@ -139,7 +141,7 @@ nav a:hover {
 .animated-logo-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 400px;
 }
 
 
@@ -147,25 +149,26 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0;
-  flex: 1 1 200px;
   cursor: pointer;
 }
 
 .logo-gif {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
 }
 
 .logo-text-container h1 {
   color: #fff;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .logo-text-container li {
+  display: block;
   padding: 5px 20px;
   color: #fff;
+  font-size: 13px;
   transition: all 0.2s;
 }
 
@@ -198,30 +201,26 @@ nav a:hover {
 }
 
 .main-parallax-container {
-  max-width: 1200px;
+  max-width: 1300px;
   display: flex;
+  margin-top: 1em;
   justify-content: center;
 }
 
-
 .main-parallax-container li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-  margin: .75em 0;
+  margin: 0 1em;
 }
 
 
 .parallax-content h1 {
   color: #fff;
   font-weight: 500;
+  font-size: 20px;
   text-align: center;
 }
 
 .parallax-gif {
-  margin: 0 10px;
+  margin: 0 auto;
   width: 50px;
   height: 50px;
   background-color: #fff;
@@ -229,9 +228,8 @@ nav a:hover {
 }
 
 .parallax-content-box {
-  width: 50%;
-  height: 200px;
-  overflow: hidden;
+  max-width: 50%;
+  min-height: 200px;
   margin: 50px 10px;
   border: 1px solid #fff;
 }
@@ -239,16 +237,15 @@ nav a:hover {
 .parallax-slide-container {
   position: relative;
   text-align: center;
-  height: 200px;
+  min-height: 200px;
   margin: 0;
   padding: 0;
 }
 
 .parallax-content-box .parallax-content-container {
   display: none;
-  position: absolute;
   width: 100%;
-  height: 400px;
+  min-height: 200px;
 }
 
 .parallax-content-container h1 {
@@ -258,7 +255,7 @@ nav a:hover {
 .parallax-content-container p {
   margin: 0 5em;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
 }
 /*parallax section-1~*/
 
@@ -281,7 +278,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
+  background-image: radial-gradient(#bdc3c7, #ecf0f1);
 }
 
 .button-container {
@@ -294,18 +291,18 @@ nav a:hover {
 .button {
   text-align: center;
   width: 30%;
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 5px;
   color: #666;
   font-weight: 700;
-  background-color: #eee;
+  background-color: #ddd;
   border: 1px solid #3498db;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
   transition: all 0.2s;
 }
 
 .button-1 {
-  background-color: #ddd;
+  background-color: #ecf0f1;
 }
 .button:hover {
   cursor: pointer;
@@ -313,23 +310,19 @@ nav a:hover {
 }
 
 .main-content-container {
-  max-width: 1024px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 25px 25px 25px;
-  background-color: #ddd;
+  max-width: 950px;
+  margin: 0 10px 20px 10px;
+  background-color: #ecf0f1;
   border: 1px solid #3498db;
   box-shadow: inset 0 2px 6px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.23);
 }
 
 .main-content-container .content {
-  margin: 0 5%;
+  margin: 10px 5%;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   color: #666;
 }
@@ -348,13 +341,13 @@ nav a:hover {
 
 .paragraph {
   color: #666;
-  font-size: 20px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .whitespace-gif {
-    min-width: 25%;
-    min-height: 20%;
+    min-width: 20%;
+    min-height: 15%;
     background-position: center;
     background-size: cover;
     background-image: url('../../tools/gifs/landing-page.gif');
@@ -363,7 +356,7 @@ nav a:hover {
 .whitespace-gif-1 {
 }
 
-.content-container-2, .content-container-3, .content-container-5, .content-container-6  {
+.main-content-container > *:not(:first-child) {
   display: none;
 }
 /*whitespace~*/
@@ -405,16 +398,16 @@ nav a:hover {
 /*text-section*/
 .main-text-section-container {
   min-width: 100%;
-  min-height: 400px;
+  min-height: 300px;
   background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+  box-shadow: 0 2px 9px rgba(0,0,0,.9),0 2px 6px rgba(0,0,0,.9);
 }
 
 .text-section-title {
   text-align: center;
   color: #444;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 25px;
   padding: 1em 0;
 }
 
@@ -423,30 +416,27 @@ nav a:hover {
   align-items: center;
 }
 
-.text-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .text-section h1 {
   color: #3498db;
 }
 .text-section p {
   color: #555;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .text-section-gif {
-  width: 50%;
-  height: 20%;
-  margin: 1em 2em;
+  width: 35%;
+  height: 15%;
+  margin: 1em;
+}
+
+.text-section-gif {
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../tools/gifs/landing-page.gif');
 }
 
 .text-section-gif-1 {
-  background-image: url('../../tools/gifs/landing-page.gif');
-  background-position: center;
-  background-size: cover;
 }
 /*text-section~*/
 
@@ -515,26 +505,23 @@ nav a:hover {
     flex-direction: column;
   }
 
-  .parallax-col li {
-    flex-direction: column;
-    margin: 20px 0;
-  }
-
   .parallax-content {
     text-align: center;
-  }
-
-  .parallax-gif {
-    order: -1;
   }
 
   .parallax-content-container p {
     margin: 0;
   }
+
+  .parallax-content-box {
+    max-width: 90%;
+    margin: 25px 0;
+  }
 /*parallax section-1~*/
 
 /*animated logo*/
   .logo-container {
+    display: block;
     margin: 50px 0;
   }
 /*animated logo~*/
@@ -555,6 +542,7 @@ nav a:hover {
     max-width: 100%;
     padding: 20px 0;
     border-radius: 0;
+    text-align: center;
   }
 
   .title {
@@ -594,7 +582,10 @@ nav a:hover {
   .logo-text-container h1 {
     padding: 0;
     font-size: 25px;
+  }
 
+  .logo-gif {
+    margin: 0 100px;
   }
 /*animated logo~*/
 }
