@@ -1,6 +1,6 @@
 $(function() {
   mobileNav();
-  parallaxContent();
+  parallaxContent()
   checkContent();
   smoothScroll();
 });
@@ -26,59 +26,100 @@ function mobileNav() {
 
 
 
+
+
+
+
+
+
+
+
+
+
 function parallaxContent() {
-  var $parallaxContainer = $('.parallax-container');
-  var $li = $parallaxContainer.find('li');
-  var $contentBox = $parallaxContainer.find($('.parallax-content-box'));
-  var $parallaxSlide = $parallaxContainer.find('.parallax-slide-container');
-  var $parallaxContentContainer = $parallaxContainer.find($('.parallax-content-container'));
-  var $parallaxContent = $parallaxContainer.find($('.parallax-content'))
-  var animationSpeed = 1000;
-  var width = 720;
-  var animationSpeed = 1000;
-  var pause = 3000;
-  var currentSlide = 1;
 
+  function fun1(slide, li) {
+    var animationDuration = 800;
 
-  function changeContent() {
-    $li.on('click', function() {
-      var $this = $(this)
-      var $secondClass = $this.attr("class").split(' ');
-      var $changeContent = $secondClass[1] + $secondClass[2];
-      console.log($changeContent);
-      stopSlider();
-      $parallaxSlide.css('margin-left', '0');
-      $parallaxSlide.css('margin-left', '-=' + $secondClass[3]);
-      $parallaxContent.find('h1').css('color', '#fff');
-      $this.find('h1').css('color', '#3498db');
-      startSlider();
+    $('.main-parallax-container li').on('click', function() {
+    });
+
+    slide.fadeIn(animationDuration);
+    li.animate({marginTop: '-75px'}, animationDuration);
+    li.find($('.parallax-content h1')).css('color', '#666');
+
+    setTimeout(function() {
+      slide.fadeOut(animationDuration);
+      li.animate({marginTop: '0'}, animationDuration);
+      li.find($('.parallax-content h1')).css('color', '#fff');
+    }, 4000);
+  }
+
+  function callFunctions() {
+    setTimeout(function() {
+      fun1($('.parallax-content-container-1'), $('.container-1'));
+      setTimeout(function() {
+        fun1($('.parallax-content-container-2'), $('.container-2'));
+        setTimeout(function() {
+          fun1($('.parallax-content-container-3'), $('.container-3'));
+          setTimeout(function() {
+            fun1($('.parallax-content-container-4'), $('.container-4'));
+            setTimeout(function() {
+              callFunctions();
+            }, 4000);
+          }, 4000);
+        }, 4000);
+      }, 4000);
     });
   }
-  changeContent();
 
-  function startSlider() {
-    interval = setInterval(function() {
-      $parallaxSlide.animate({'margin-left': '-=' + width}, animationSpeed, function() {
-        ++currentSlide
-        console.log(currentSlide)
-        if(currentSlide === ($parallaxContentContainer.length - 1)) {
-          currentSlide = 1;
-          $parallaxSlide.css('margin-left', '0');
-        }
-      });
-    }, pause);
-  }
+  callFunctions();
 
-  function stopSlider() {
-    clearInterval(interval);
-  }
-
-  $parallaxSlide.on('mouseenter', stopSlider).on('mouseleave', startSlider)
-
-  startSlider();
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
