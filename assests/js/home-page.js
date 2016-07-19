@@ -55,7 +55,7 @@ function mainSlider() {
     if (counter1 === max1) {
       counter1 = 1;
     }
-    callAnimate();
+    callAnimate1();
   }
 
   function animateSlider2() {
@@ -69,7 +69,7 @@ function mainSlider() {
     if (counter2 === max2) {
       counter2 = 1;
     }
-    callAnimate();
+    callAnimate2();
   }
 
   function clickSlider($this) {
@@ -89,22 +89,32 @@ function mainSlider() {
     clickSlider($(this));
   });
 
-  function callAnimate() {
+  function callAnimate1() {
     if (pass === 0) {
-      console.log('interval pass');
       var sliderInterval1 = setTimeout(animateSlider1, 5000);
-      var sliderInterval2 = setTimeout(animateSlider2, 5000);
     }
     else {
-      console.log('else pass');
       setTimeout(function() {
         pass = 0;
-        callAnimate();
+        callAnimate1();
       }, 15000);
     }
   }
 
-  callAnimate();
+  function callAnimate2() {
+    if (pass === 0) {
+      var sliderInterval2 = setTimeout(animateSlider2, 5000);
+    }
+    else {
+      setTimeout(function() {
+        pass = 0;
+        callAnimate2();
+      }, 15000);
+    }
+  }
+
+  callAnimate1();
+  callAnimate2();
 }
 
 
