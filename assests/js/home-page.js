@@ -1,6 +1,5 @@
 $(function() {
   mobileNav();
-  // parallaxContent();
   mainSlider();
   checkContent();
   smoothScroll();
@@ -125,7 +124,6 @@ function mobileNav() {
 function mainSlider() {
   var stop1 = false;
   var stop2 = false;
-
   var $allLi = ' .main-parallax-container li';
   var $li = ' .container-';
   var $parallaxContentContainer = ' .parallax-content-container';
@@ -135,7 +133,7 @@ function mainSlider() {
   var max1 = 6;
   var max2 = 6;
   var animationSpeed = 800;
-
+  var pass = 0;
 
   function animateSlider1() {
     var $parallaxContainer1 = '.parallax-container-1';
@@ -144,6 +142,11 @@ function mainSlider() {
     $($parallaxContainer1 + $allLi + ' h1').css('color', '#fff');
     $($parallaxContainer1 + $li + counter1 + ' h1').css('color', '#555');
     counter1 += 1;
+
+    if (counter1 === max1) {
+      counter1 = 1;
+    }
+    callAnimate();
   }
 
   function animateSlider2() {
@@ -159,9 +162,8 @@ function mainSlider() {
     var $getClass = $this.attr("class").split(' ');
     var $whichNumber = $getClass[0].substr(-1);
     var $thisParent = $this.closest('.parallax-container').attr('class').split(' ')[1];
-    var timeout1;
-    var timeout2;
 
+    pass = 1;
     $('.' + $thisParent + $allLi + ' h1').css('color', '#fff');
     $this.find('h1').css('color', '#555');
 
@@ -169,12 +171,26 @@ function mainSlider() {
     $('.' + $thisParent + $parallaxContentContainer + '-' + $whichNumber).fadeIn(animationSpeed);
   }
 
+  $($allLi).on('click', function() {
+    clickSlider($(this));
+  });
+
+  function callAnimate() {
+    if (pass === 0) {
+      var sliderInterval1 = setTimeout(animateSlider1, 5000);
+      var sliderInterval2 = setTimeout(animateSlider2, 5000);
+    }
+    else {
+      setTimeout(function() {
+        pass = 0;
+        callAnimate();
+      }, 15000);
+    }
+  }
 
 
 
-  animateSlider1();
-
-  animateSlider2();
+  callAnimate();
 }
 
 
