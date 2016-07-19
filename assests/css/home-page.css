@@ -5,6 +5,7 @@
 /*navbar*/
 nav {
   position: fixed;
+  background-image: url('../../tools/images/escheresque.png');
   width: 100%;
   z-index: 150;
   display: flex;
@@ -108,6 +109,7 @@ nav a:hover {
   color:  #444;
   font-size: 14px;
   padding: 4em;
+  background-image: url('../../tools/images/escheresque.png');
   box-shadow: 0 0 5px 6px rgba(0,0,0,.23);
 
 }
@@ -117,6 +119,7 @@ nav a:hover {
 
 /*animated logo*/
 .animated-logo {
+  padding: 1em 0;
   background-image: radial-gradient(#2980b9, #004C8F);
 }
 
@@ -187,6 +190,7 @@ nav a:hover {
 .parallax-container {
   max-width: 100%;
   min-height:600px;
+  padding-top: 1em;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -222,6 +226,7 @@ nav a:hover {
 
 .parallax-container .title, .parallax-container .paragraph {
   color: #fff;
+  text-align: center;
 }
 
 .parallax-container .seperator {
@@ -536,6 +541,10 @@ nav a:hover {
   .parallax-content-box {
     max-width: 90%;
     margin: 25px 0;
+  }
+
+  .parallax-content-box .parallax-content-container-1 {
+    display: block;
   }
 /*parallax section-1~*/
 
