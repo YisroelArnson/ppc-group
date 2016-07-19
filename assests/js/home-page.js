@@ -131,7 +131,7 @@ function mainSlider() {
   var $parallaxContentContainer = ' .parallax-content-container';
 
   var counter1 = 1;
-  var counter2 = 2;
+  var counter2 = 1;
   var max1 = 6;
   var max2 = 6;
   var animationSpeed = 800;
@@ -144,14 +144,6 @@ function mainSlider() {
     $($parallaxContainer1 + $allLi + ' h1').css('color', '#fff');
     $($parallaxContainer1 + $li + counter1 + ' h1').css('color', '#555');
     counter1 += 1;
-    if (counter1 === max1) {
-      counter1 = 1;
-      sliderState1();
-    }
-
-    else if (stop1 === false) {
-      sliderState1();
-    }
   }
 
   function animateSlider2() {
@@ -159,23 +151,16 @@ function mainSlider() {
     $($parallaxContainer2 + $parallaxContentContainer).hide();
     $($parallaxContainer2 + $parallaxContentContainer + '-' + counter2).fadeIn(animationSpeed);
     $($parallaxContainer2 + $allLi + ' h1').css('color', '#fff');
-    $($parallaxContainer2 + $li + counter1 + ' h1').css('color', '#555');
+    $($parallaxContainer2 + $li + counter2 + ' h1').css('color', '#555');
     counter2 += 1;
-    if (counter2 === max2) {
-      counter2 = 1;
-      sliderState2();
-    }
-
-    else if (stop2 === false) {
-      sliderState2();
-    }
   }
 
   function clickSlider($this) {
     var $getClass = $this.attr("class").split(' ');
     var $whichNumber = $getClass[0].substr(-1);
     var $thisParent = $this.closest('.parallax-container').attr('class').split(' ')[1];
-
+    var timeout1;
+    var timeout2;
 
     $('.' + $thisParent + $allLi + ' h1').css('color', '#fff');
     $this.find('h1').css('color', '#555');
@@ -184,50 +169,12 @@ function mainSlider() {
     $('.' + $thisParent + $parallaxContentContainer + '-' + $whichNumber).fadeIn(animationSpeed);
   }
 
-  function hoverSlider() {
-
-  }
-
-  function sliderState1() {
-
-    if (stop1 === false) {
-      var timeout1 = setTimeout(function() {
-        animateSlider1();
-      }, 5000);
-    }
-
-    $($allLi).on('click', function() {
-      clickSlider($(this));
-      if($(this).closest('.parallax-container').attr('class').split(' ')[1] === '.parallax-container-1') {
-        clearTimeout(timeout1);
-        stop1 = true;
-      }
-    });
 
 
-  }
 
-  function sliderState2() {
+  animateSlider1();
 
-    if (stop2 === false) {
-      var timeout2 = setTimeout(function() {
-        animateSlider2();
-      }, 5000);
-    }
-    $($allLi).on('click', function() {
-      clickSlider($(this));
-      if($(this).closest('.parallax-container').attr('class').split(' ')[1] === '.parallax-container-2') {
-        clearTimeout(timeout2);
-        stop2 = true;
-      }
-
-    });
-
-
-  }
-
-  sliderState1();
-  sliderState2();
+  animateSlider2();
 }
 
 
