@@ -1,6 +1,7 @@
 $(function() {
   mobileNav();
   checkContent();
+  catchPhrase();
   smoothScroll();
   mobileScript();
 });
@@ -15,17 +16,6 @@ function mobileNav() {
     $linkContainer.toggleClass('nav-open');
   });
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -49,7 +39,9 @@ function mainSlider() {
     $($parallaxContainer1 + $parallaxContentContainer).hide();
     $($parallaxContainer1 + $parallaxContentContainer + '-' + counter1).fadeIn(animationSpeed);
     $($parallaxContainer1 + $allLi + ' h1').css('color', '#fff');
-    $($parallaxContainer1 + $li + counter1 + ' h1').css('color', '#555');
+    $($parallaxContainer1 + $allLi + ' h1').css('border-bottom', 'none');
+    // $($parallaxContainer1 + $li + counter1 + ' h1').css('color', '#666');
+    $($parallaxContainer1 + $li + counter1 + ' h1').css('border-bottom', '3px solid #3498db');
     counter1 += 1;
 
     if (counter1 === max1) {
@@ -62,8 +54,10 @@ function mainSlider() {
     var $parallaxContainer2 = '.parallax-container-2';
     $($parallaxContainer2 + $parallaxContentContainer).hide();
     $($parallaxContainer2 + $parallaxContentContainer + '-' + counter2).fadeIn(animationSpeed);
+    $($parallaxContainer2 + $allLi + ' h1').css('border-bottom', 'none');
     $($parallaxContainer2 + $allLi + ' h1').css('color', '#fff');
-    $($parallaxContainer2 + $li + counter2 + ' h1').css('color', '#555');
+    // $($parallaxContainer2 + $li + counter2 + ' h1').css('color', '#666');
+    $($parallaxContainer2 + $li + counter2 + ' h1').css('border-bottom', '3px solid #3498db');
     counter2 += 1;
 
     if (counter2 === max2) {
@@ -79,7 +73,9 @@ function mainSlider() {
 
     pass = 1;
     $('.' + $thisParent + $allLi + ' h1').css('color', '#fff');
-    $this.find('h1').css('color', '#555');
+    $('.' + $thisParent + $allLi + ' h1').css('border-bottom', 'none');
+    // $this.find('h1').css('color', '#666');
+    $this.find('h1').css('border-bottom', '3px solid #3498db')
 
     $('.' + $thisParent + $parallaxContentContainer).hide();
     $('.' + $thisParent + $parallaxContentContainer + '-' + $whichNumber).fadeIn(animationSpeed);
@@ -132,7 +128,7 @@ function mobileScript() {
 
 
       $('.' + $thisParent + $allLi + ' h1').css('color', '#fff');
-      $this.find('h1').css('color', '#555');
+      $this.find('h1').css('color', '#3498db');
 
       $('.' + $thisParent + $parallaxContentContainer).hide();
       $('.' + $thisParent + $parallaxContentContainer + '-' + $whichNumber).fadeIn(800);
@@ -155,53 +151,82 @@ function mobileScript() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function checkContent() {
+//     var $buttons1 = $('.whitespace-1 .button');
+//     var $content1 = $('.whitespace-1 .content');
+//     var $buttons2 = $('.whitespace-2 .button');
+//     var $content2 = $('.whitespace-2 .content');
+//
+//     $buttons1.on('click', function() {
+//       var $this = $(this);
+//       changeButton($this, $buttons1, $content1, '#f6f6f6', '#ddd');
+//     });
+//
+//     $buttons2.on('click', function() {
+//       var $this = $(this);
+//       changeButton($this, $buttons2, $content2, '#003F83', '#1A5DA1');
+//     });
+//
+//
+//     function changeButton($this, button, content, backgroundColor1, backgroundColor2) {
+//       var $secondClass = $this.attr("class").split(' ');
+//       var $thisContent = $secondClass[2] + '-' + $secondClass[3];
+//
+//       button.css('background-color', backgroundColor2);
+//       $this.css('background-color', backgroundColor1);
+//
+//       content.css('display', 'none');
+//       $('.' + $thisContent).fadeIn(800);
+//     }
+//
+// }
 
 
 function checkContent() {
-    var $buttons1 = $('.whitespace-1 .button');
-    var $content1 = $('.whitespace-1 .content');
-    var $buttons2 = $('.whitespace-2 .button');
-    var $content2 = $('.whitespace-2 .content');
+    var $buttons = '.whitespace-container .button';
+    var $content = '.whitespace-container .content';
 
-    $buttons1.on('click', function() {
+    $($buttons).on('click', function() {
       var $this = $(this);
-      changeButton($this, $buttons1, $content1, '#f6f6f6', '#ddd');
-    });
-
-    $buttons2.on('click', function() {
-      var $this = $(this);
-      changeButton($this, $buttons2, $content2, '#003F83', '#1A5DA1');
-    });
-
-
-    function changeButton($this, button, content, backgroundColor1, backgroundColor2) {
       var $secondClass = $this.attr("class").split(' ');
       var $thisContent = $secondClass[2] + '-' + $secondClass[3];
+      var $parent = $this.closest('.whitespace').attr('class').split(' ')[1]
 
-      button.css('background-color', backgroundColor2);
-      $this.css('background-color', backgroundColor1);
+      $('.' + $parent + ' ' + $buttons).css('background-color', '#1A5DA1');
+      $this.css('background-color', '#003F83');
 
-      content.css('display', 'none');
+      $('.' + $parent + ' ' + $content).css('display', 'none');
       $('.' + $thisContent).fadeIn(800);
-    }
-
+    });
 }
 
 
+
+
+
+
+
+
+
+
+
+function catchPhrase() {
+  var $allPhrase = $('.ppc-catch-phrase');
+  var $phrase = '.catch-phrase-';
+
+  var catchCounter = 2;
+  var animationSpeed = 800;
+  setInterval(function() {
+    $allPhrase.fadeOut();
+    $($phrase + catchCounter).fadeIn(animationSpeed);
+    ++catchCounter
+    if (catchCounter === $allPhrase.length + 1) {
+      catchCounter = 1;
+    }
+  }, 6000);
+
+
+}
 
 
 
