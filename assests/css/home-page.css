@@ -17,8 +17,10 @@ nav {
 .ppc-title {
   font-size: 12px;
   color:  #444;
-  margin: 5px 2%;
+  margin: 5px 20px;
+  text-align: center;
 }
+
 
 nav h1 {
   border-bottom: 2px solid #3498db;
@@ -26,7 +28,7 @@ nav h1 {
 }
 
 
-nav a {
+nav a:not(.home) {
   display: inline-block;
   color:  #444;
   font-size: 20px;
@@ -34,7 +36,7 @@ nav a {
   padding: 25px 15px;
 }
 
-nav a:hover {
+nav a:not(.home):hover {
   background-color: #3498db;
   color: #fff;
 }
@@ -108,16 +110,20 @@ nav a:hover {
 }
 
 .ppc-catch-phrase h1 {
-  font-size: 35px;
+  font-size: 30px;
   text-shadow: 0 3px 1px #666;
 }
 
-#padding-left{
+.catch-phrase-1 h1 {
+  font-size: 45px;
+}
+
+#padding-left {
   padding-left: 150px;
 }
 
-#float-right {
-  padding-left: 50%;
+.center-phrase {
+  text-align: center;
 }
 /*banner*/
 
@@ -203,32 +209,32 @@ nav a:hover {
 }
 
 .logo-gif-1 {
-  background-image: url('../../tools/images/Search Image.jpg');
+  background-image: url('../../tools/images/iStock_51065308_LARGE - Search Button.jpg');
 }
 
 .logo-gif-2 {
-  background-image: url('../../tools/images/Website Design 01.jpg');
+  background-image: url('../../tools/images/iStock_73812267_XXLARGE - Website & Landing Page Design  and Local Listings Evaluation.jpg');
 }
 
 .logo-gif-3 {
-  background-image: url('../../tools/images/Online Icons 01.jpg');
+  background-image: url('../../tools/images/iStock_83824889_XXXLARGE - Evaluations & Consultations.jpg');
 }
 
 .logo-gif-4 {
-  background-image: url('../../tools/images/Web Presence 01.jpg');
+  background-image: url('../../tools/images/iStock_62931320_XXXLARGE - Your Online Web Presence.jpg');
 }
 
 .logo-gif-5 {
-  background-image: url('../../tools/images/Online Presence 02.jpg');
+  background-image: url('../../tools/images/iStock_16550812_XXXLARGE - Display Advertising - Marketing.jpg');
 }
 
 .logo-gif-6 {
-  background-image: url('../../tools/images/Reporting 02.jpg');
+  background-image: url('../../tools/images/iStock_19046733_XXXLARGE - Reporting.jpg');
 }
 /*animated logo~*/
 
 
-/*parallax section-1*/
+/*color section-1*/
 .color-container {
   min-height: 800px;
   display: flex;
@@ -238,10 +244,12 @@ nav a:hover {
 }
 
 .color-title {
+  text-align: center;
   color: #444;
 }
 
 .color-paragraph {
+  text-align: center;
   color: #444;
   font-size: 25px;
 }
@@ -266,7 +274,7 @@ nav a:hover {
 
 .main-color-container li {
   display: inline-block;
-  max-width: 10%;
+  max-width: 20%;
   margin: 0 2em;
 }
 
@@ -279,36 +287,24 @@ nav a:hover {
   height: 75px;
   margin: 0 auto;
   border-radius: 100%;
+  background-color: #444;
 }
 
-.color-gif-1 {
-  background-color: #e74c3c;
-}
-
-.color-gif-2 {
-  background-color: #3498db;
-}
-
-.color-gif-3 {
-  background-color: #2ecc71;
-}
-
-.color-gif-4 {
-  background-color: #f1c40f;
-}
-
-.color-gif-5 {
-  background-color: #9b59b6;
-}
 
 .color-content-box {
-  width: 75%;
+  width: 75vw;
   min-height: 400px;
   margin: 4em 0;
+
 }
 
 .color-content-container {
-  box-shadow: inset 0 2px 6px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.23);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(#2980b9, #004C8F);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.23);
   min-height: 400px;
 }
 
@@ -316,31 +312,10 @@ nav a:hover {
   display: none;
 }
 
-.color-content-container-1 {
-  background-color: #e74c3c;
-}
-
-.color-content-container-2 {
-  background-color: #3498db;
-}
-
-.color-content-container-3 {
-  background-color: #2ecc71;
-}
-
-.color-content-container-4 {
-  background-color: #f1c40f;
-}
-
-.color-content-container-5 {
-  background-color: #9b59b6;
-}
-
-
 .color-content-container h1 {
   color: #fff;
-  padding-top: 1em;
-  font-size: 30px;
+  padding: 0.5em 1em;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -352,17 +327,47 @@ nav a:hover {
 .color-content-container p {
   color: #fff;
   font-size: 21px;
-  padding: 2em;
-  text-align: justify;
+  padding: 0 2em;
 }
-/*parallax section-1~*/
 
-/*prallax-2*/
-/*add parallax 2 css here*/
-.parallax-container-2 {
-  background-image: url('../../tools/images/UA PPC EDIT-3.jpg');
+.smaller-width {
+  margin: 0 10em;
 }
-/*parallax-2~*/
+/*color section-1~*/
+
+/*whitespace 3*/
+.whitespace-3 .whitespace-container {
+  background-image: radial-gradient(#2980b9, #004C8F);
+}
+
+.side-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whitespace-3 .button-container {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 3em;
+}
+
+.whitespace-3 .button {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 5px;
+  color:  #fff;
+  font-weight: 700;
+  background-color: #1A5DA1;
+  border: 1px solid #3498db;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+  transition: all 0.2s;
+}
+/*whitespace 3~*/
 
 
 
@@ -373,12 +378,46 @@ nav a:hover {
 /*whitespace*/
 .whitespace-container {
   max-width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 4em 0;
-  background-color: #fff;
+}
+
+.whitespace-gif {
+  z-index: -150;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.whitespace-gif:not(:first-child) {
+  display: none;
+}
+
+.main-whitespace-title {
+  font-size: 25px;
+  text-shadow: 0 2px 1px #444;
+  text-align: center;
+  color:  #fff;
+}
+
+.main-whitespace-paragraph {
+  color: #fff;
+  text-shadow: 0 2px 1px #444;
+  text-align: center;
+  font-size: 25px;
+}
+
+.main-whitespace-seperator {
+  width: 20%;
 }
 
 .button-container {
@@ -401,7 +440,7 @@ nav a:hover {
   transition: all 0.2s;
 }
 
-.button-1 {
+.button-1, .button-6, .whitespace-3 .button-10 {
   background-color: #003F83;
 }
 .button:hover {
@@ -410,7 +449,11 @@ nav a:hover {
 }
 
 .main-content-container {
+  display: flex;
+  align-items: center;
   max-width: 950px;
+  min-width: 950px;
+  min-height: 626px;
   margin: 0 10px 20px 10px;
   background-color: #1A5DA1;
   border: 1px solid #3498db;
@@ -418,19 +461,9 @@ nav a:hover {
 }
 
 .main-content-container .content {
-  margin: 10px 1%;
+  margin: 3em 1%;
 }
 
-.title {
-  font-size: 25px;
-  text-align: center;
-  color:  #1A5DA1;
-}
-
-.paragraph {
-  color: #1A5DA1;
-  font-size: 25px;
-}
 
 .whitespace-title {
   font-size: 25px;
@@ -439,69 +472,57 @@ nav a:hover {
 }
 
 .whitespace-paragraph {
-  text-align: center;
-  font-size: 15px;
+  text-align: justify;
+  font-size: 20px;
   line-height: 1.5;
-  width: 60%;
   margin: 1em;
   color: #fff;
 }
 
+.whitespace-paragraph a {
+  color: #333;
+}
 .whitespace-container .seperator {
   width: 20%;
   background-color: #3498db;
 }
 
-.logo-paragraph-container {
-  display: flex;
-  align-items: center;
-  text-align: justify;
-  margin: .5em;
-}
 
-
-.whitespace-gif {
-    height: 20%;
-    min-width: 350px;
-    max-width: 350px;
-    background-position: center;
-    background-size: cover;
-}
 
 .whitespace-gif-1 {
-  background-image: url('../../tools/images/Website Design 05.jpg');
+  background-image: url('../../tools/images/website-design-2.jpg');
 }
 
 .whitespace-gif-2 {
-  background-image: url('../../tools/images/Website Design 0.jpg');
+  background-image: url('../../tools/images/photodune-7827969-responsive-web-design-concept-l-1 SM-KB.jpg');
 }
 
 .whitespace-gif-3 {
-  background-image: url('../../tools/images/Online Presence 02.jpg');
+  background-image: url('../../tools/images/edit-1-marketing.jpg');
 }
 
 .whitespace-gif-4 {
-  background-image: url('../../tools/images/Technical Sophistication 01.jpg');
+  background-image: url('../../tools/images/iStock_63913861_XXXLARGE - Technical Sophistication.jpg');
 }
 
 .whitespace-gif-5 {
-  background-image: url('../../tools/images/Optimization.jpg');
+  background-image: url('../../tools/images/optimization-edit-1.jpg');
+}
+
+.whitespace-gif-6 {
+  background-image: url('../../tools/images/iStock_89127459_XXXLARGE - Website Evaluation.jpg');
+}
+
+.whitespace-gif-7 {
+  background-image: url('../../tools/images/iStock_17426795_XXLARGE - PPC Evaluations.jpg');
 }
 
 .whitespace-gif-8 {
-  background-image: url('../../tools/images/Website Design 03.jpg');
+  background-image: url('../../tools/images/display-ad-edit-1.jpg');
 }
 
 .whitespace-gif-9 {
-  background-image: url('../../tools/images/2016-07-13_21-06-55-Comp.jpg');
-}
-
-.whitespace-gif-10 {
-  background-image: url('../../tools/images/Website Design 01.jpg');
-}
-
-.whitespace-gif-11 {
-  background-image: url('../../tools/images/Online Icons 01.jpg');
+  background-image: url('../../tools/images/iStock_42560772_XXLARGE - Local Listings.jpg');
 }
 
 
@@ -509,26 +530,6 @@ nav a:hover {
   display: none;
 }
 /*whitespace~*/
-
-/*whitespace-2*/
-.whitespace-2 .whitespace-container {
-  background-image: radial-gradient(#1A5DA1, #003F83);
-}
-
-.whitespace-2 .button-1 {
-  background-color: #003F83;
-}
-
-
-.whitespace-2 .title {
-  color: #fff;
-}
-
-
-.whitespace-2 .paragraph {
-  color: #fff;
-}
-/*whitespace-2~*/
 
 
 /*text-section*/
@@ -566,7 +567,7 @@ nav a:hover {
 
 .text-section h1 {
   font-size: 20px;
-  color: #258cd1;
+  color: #003F83;
   padding-bottom: 0.5em;
 }
 
@@ -588,7 +589,7 @@ nav a:hover {
 }
 
 .report-graphic {
-  background-image: url('../../tools/images/Reporting 03.jpg');
+  background-image: url('../../tools/images/iStock_25700824_XXXLARGE - Reporting Section.jpg');
 }
 
 .display-advertising-graphic {
@@ -612,7 +613,7 @@ nav a:hover {
 
 .contact-form-container {
   width: 100%;
-  background-color: #F0F8FF;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,12 +625,12 @@ nav a:hover {
 
 
 .contact-form-container form h1 {
-    color: #1abc9c;
+    color: #16a085;
     font-size: 40px;
 }
 
 .contact-form-container form span {
-  color: #74BBFB;
+  color: #2980b9;
   font-size: 50px;
 }
 
@@ -638,7 +639,10 @@ nav a:hover {
   min-width: 40vw;
   max-width: 100%;
   margin: 20px;
+  color: #fff;
+  background-color: #3498db;
   box-shadow: 0 1px 1px #ccc;
+  text-align: center;
   border-radius: 5px;
   border: none;
   transition: box-shadow 0.3s;
@@ -650,22 +654,26 @@ nav a:hover {
 
 .contact-form-container input {
   min-height: 50px;
-  text-align: center;
 }
 
 .contact-form-container textarea {
   min-height: 150px;
 }
 
+.contact-form-container textarea:focus {
+  text-align: left;
+}
+
 #submit {
   color: #fff;
-  background-color: #62B1F6;
+  background-color: #16a085;
   cursor: pointer;
+  border: none;
   transition: all 0.3s;
 }
 
 #submit:hover {
-  background-color: #74BBFB;
+  background-color: #1abc9c;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
@@ -677,8 +685,8 @@ nav a:hover {
   height: 200px;
   margin-top: 2em;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 1px 1px #ccc;
+  background-color: #F0F8FF;
+  box-shadow: 0 2px 2px #ccc;
 }
 
 .contact-logo {
@@ -698,7 +706,7 @@ nav a:hover {
 }
 
 .contact-logo-text h1{
-  color: #1abc9c;
+  color: #16a085;
   font-size: 40px;
 }
 
@@ -710,7 +718,7 @@ nav a:hover {
 }
 
 .contact-logo-text h2, .contact-logo-text a {
-  color: #74BBFB;
+  color: #2980b9;
   font-size: 35px;
 }
 
@@ -720,18 +728,239 @@ nav a:hover {
   color: #fff;
   box-shadow: 0 1px 1px #ccc;
   border-radius: 5px;
-  background-color: #62B1F6;
+  background-color: #16a085;
   cursor: pointer;
   border: none;
   transition: all 0.3s;
 }
 
 .contact-logo-text button:hover {
-  background-color: #74BBFB;
+  background-color: #1abc9c;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
 /*contact form~*/
+
+
+
+/*footer*/
+footer {
+  min-height: 425px;
+  background-color: #1f1f1f;
+  color: #aaa;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: #ddd;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+footer a:hover{
+  color: #3498db;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-title h1 {
+  display: inline-block;
+  padding: 0 4%;
+  border-bottom: 2px solid #3498db;
+}
+
+.footer-nav {
+    margin: 20px 0;
+}
+
+.footer-nav a {
+  padding: 0 5px;
+}
+
+.footer-location h1 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 100;
+  padding: 10px 0;
+}
+
+.footer-location h2 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 18px;
+  margin: 0 20%;
+}
+
+footer hr {
+  width: 50%;
+}
+
+.footer-legal h2 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.footer-legal span {
+  color: #3498db;
+}
+
+footer .policies a {
+  display: inline-block;
+  color: #aaa;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+footer .policies a:hover{
+  color: #3498db;
+}
+
+/*footer~*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*who-we-serve*/
+.who-we-serve {
+  color: #444;
+}
+
+
+.who-we-serve-title {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #555;
+}
+
+.who-we-serve-title h1 {
+  text-align: center;
+}
+
+.who-we-serve-title hr {
+  width: 30%;
+}
+
+.who-we-serve-title h2 {
+  text-align: center;
+}
+
+.who-we-serve-box {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 10%;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+
+}
+
+.who-we-serve-box h1 {
+  font-size: 30px;
+}
+
+.who-we-serve-box p {
+  font-size: 25px;
+}
+
+.who-we-serve-box-1 {
+  background-image: radial-gradient(#2980b9, #004C8F);
+  color: #fff;
+}
+
+.who-we-serve-box-2 {
+    font-size: 25px;
+}
+
+.who-we-serve-box-2 p {
+  margin-left: 8%;
+}
+
+.who-we-serve-box-3 {
+  min-height: 250px;
+  background-image: radial-gradient(#2980b9, #004C8F);
+  color: #fff;
+}
+/*who we serve~*/
+
+
+
+
+
+/*why theppcgroup*/
+.why-the-ppcgroup {
+  min-height: 250px;
+  color: #444;
+}
+
+.why-the-ppcgroup-title {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.why-the-ppcgroup-title hr {
+  width: 50%;
+}
+
+.why-the-ppcgroup p {
+  font-size: 25px;
+  line-height: 1.5;
+  padding: 2em 10%;
+}
+
+.why-the-ppcgroup-box-1 {
+  padding: 0 10%;
+}
+
+.why-the-ppcgroup-box-1 p {
+  line-height: 2;
+  text-align: justify;
+}
+
+.why-the-ppcgroup-box-2 {
+  padding: 1em 5%;
+  text-align: justify;
+  color: #fff;
+  background-image: radial-gradient(#2980b9, #004C8F);
+}
+
+.why-the-ppcgroup-box-2 h2, .why-the-ppcgroup-box-2 h4 {
+  text-align: center;
+}
+
+
+.why-the-ppcgroup-box-2 span {
+  margin-left: 5%;
+}
+
+/*why theppcgroup~*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -791,6 +1020,15 @@ nav a:hover {
 .contact-form-container {
   flex-direction: column;
 }
+
+.contact-form-container input, .contact-form-container textarea {
+  min-width: 70vw;
+  margin: 20px auto;
+}
+
+.contact-form-container form h1 {
+  text-align: center;
+}
 /*contact-form~*/
 }
 
@@ -828,6 +1066,36 @@ nav a:hover {
   }
 /*animated logo~*/
 
+/*color section 1*/
+.main-color-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-color-container li {
+  display: block;
+  max-width: 100%;
+  margin: 2em;
+}
+
+.color-content-container p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.color-content-box {
+  width: 95%;
+  min-height: 400px;
+  margin: 4em 0;
+
+}
+
+.smaller-width {
+  margin: 0;
+}
+/*color section 1*/
+
 /*whitespace*/
   .button-container {
     flex-direction: column;
@@ -841,8 +1109,9 @@ nav a:hover {
   }
 
   .main-content-container {
-    max-width: 100%;
-    padding: 20px 0;
+    max-width: 90%;
+    min-width: 0;
+    margin: 0 auto;
     border-radius: 0;
     text-align: center;
   }
@@ -863,6 +1132,36 @@ nav a:hover {
     margin: .5em 0;
   }
 /*whitespace~*/
+
+/*whitespace 3*/
+.side-button-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.whitespace-3 .button-container {
+  max-width: 100%;
+  min-height: 300px;
+  justify-content: center;
+}
+
+.whitespace-3 .button {
+  width: 80%;
+}
+/*whitespace 3~*/
+
+/*why-the-ppcgroup*/
+.why-the-ppcgroup-box-1 p {
+  line-height: 1;
+  text-align: left;
+}
+
+.why-the-ppcgroup-box-2 {
+  text-align: left;
+}
+
+/*why-the-ppcgroup~*/
 }
 
 
@@ -914,6 +1213,16 @@ nav a:hover {
 }
 
 @media (max-width: 480px) {
+/*banner*/
+.ppc-catch-phrase h1 {
+  font-size: 25px;
+}
+
+.catch-phrase-1 h1 {
+  font-size: 35px;
+}
+/*banner~*/
+
 /*animated logo*/
   .logo-container {
     justify-content: center;
@@ -933,6 +1242,32 @@ nav a:hover {
     margin: 0 100px;
   }
 /*animated logo~*/
+
+/*contact form*/
+.floating-icon {
+  display: none;
+}
+/*contact form~*/
+
+/*footer*/
+footer a {
+  padding: 10px 0;
+}
+.footer-nav {
+  margin: 0;
+}
+
+.footer-nav a {
+    text-align: center;
+    display: block;
+}
+/*footer~*/
+
+/*who we serve*/
+.who-we-serve-box {
+  text-align: left;
+}
+/*who we serve~*/
 }
 
 /*media queries~*/
