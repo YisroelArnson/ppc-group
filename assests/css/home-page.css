@@ -87,7 +87,7 @@ nav a:not(.home):hover {
   min-height: 625px;
   background-image: url('../../tools/images/UA PPC EDIT-4.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 90%;
   color: #fff;
 }
 
@@ -920,9 +920,13 @@ footer .policies a:hover{
   width: 50%;
 }
 
+.why-the-ppcgroup h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
 .why-the-ppcgroup p {
   font-size: 25px;
-  line-height: 1.5;
   padding: 2em 10%;
 }
 
@@ -931,7 +935,6 @@ footer .policies a:hover{
 }
 
 .why-the-ppcgroup-box-1 p {
-  line-height: 2;
   text-align: justify;
 }
 
@@ -942,15 +945,46 @@ footer .policies a:hover{
   background-image: radial-gradient(#2980b9, #004C8F);
 }
 
-.why-the-ppcgroup-box-2 h2, .why-the-ppcgroup-box-2 h4 {
+
+
+.bullet-point-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    margin: 2em 0;
+}
+
+.bullet-point-container li {
+  font-size: 20px;
+  margin: 1em 10px;
+  list-style-type: circle;
+}
+
+.why-the-ppcgroup-box-3 {
+  padding: 1em 10%;
+}
+
+.why-the-ppcgroup-box-3 li {
+    font-size: 25px;
+    line-height: 1;
+    margin: 1em 0;;
+}
+
+.why-the-ppcgroup-box-3 h3 {
   text-align: center;
 }
 
-
-.why-the-ppcgroup-box-2 span {
-  margin-left: 5%;
+.why-the-ppcgroup-box-4 {
+  padding: 1em 20%;
+  color: #fff;
+  background-image: radial-gradient(#2980b9, #004C8F);
 }
 
+.why-the-ppcgroup-box-4 li {
+  list-style-type: square;
+  margin: 1em 0;
+  font-size: 23px;
+}
 /*why theppcgroup~*/
 
 
@@ -1035,7 +1069,9 @@ footer .policies a:hover{
 @media (max-width: 1024px) {
 /*nav*/
   .x {display: block;}
-  nav {height: 75px;}
+  nav {
+    height: 75px;
+  }
 
   .link-container {
     position: fixed;
@@ -1153,7 +1189,6 @@ footer .policies a:hover{
 
 /*why-the-ppcgroup*/
 .why-the-ppcgroup-box-1 p {
-  line-height: 1;
   text-align: left;
 }
 
