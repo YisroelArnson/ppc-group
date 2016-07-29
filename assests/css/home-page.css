@@ -21,6 +21,28 @@ nav {
   text-align: center;
 }
 
+.link-container {
+  display: flex;
+}
+
+.free {
+  display: flex;
+  color: #444;
+  font-weight: 600;
+}
+
+.free-2 {
+  display: none;
+}
+
+.free div {
+  margin: 1em;
+  text-align: center;
+}
+
+.blue {
+  color: #3498db;
+}
 
 nav h1 {
   border-bottom: 2px solid #3498db;
@@ -58,6 +80,11 @@ nav a:not(.home):hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+.dropdown .dropdown-content a {
+  font-size: 18px;
+  color: #3498db;
+}
+
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -87,7 +114,7 @@ nav a:not(.home):hover {
   min-height: 625px;
   background-image: url('../../tools/images/UA PPC EDIT-4.jpg');
   background-size: cover;
-  background-position: 90%;
+  background-position: center;
   color: #fff;
 }
 
@@ -274,6 +301,7 @@ nav a:not(.home):hover {
 
 .main-color-container li {
   display: inline-block;
+  cursor: pointer;
   max-width: 20%;
   margin: 0 2em;
 }
@@ -283,12 +311,38 @@ nav a:not(.home):hover {
 }
 
 .color-gif {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   border-radius: 100%;
-  background-color: #444;
+  background-size: cover;
+  background-position: center;
 }
+
+.color-gif-1 {
+  background-image: url('../../tools/gifs/search-engine.gif');
+}
+
+.color-gif-2 {
+  background-image: url('../../tools/gifs/adwords-campaign.gif');
+}
+
+.color-gif-3 {
+  background-image: url('../../tools/gifs/landing-page.gif');
+}
+
+.color-gif-4 {
+  background-image: url('../../tools/gifs/fresh-content.gif');
+}
+
+.color-gif-5 {
+  background-image: url('../../tools/gifs/local-seo.gif');
+}
+
+
+
+
+
 
 
 .color-content-box {
@@ -300,6 +354,7 @@ nav a:not(.home):hover {
 
 .color-content-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -319,10 +374,32 @@ nav a:not(.home):hover {
   text-align: center;
 }
 
+.color-content-container.float-top h1 {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1em;
+  right: 0;
+  text-align: center;
+}
+
 .color-content-container .color-seperator {
     width: 50%;
     background-color: #fff;
 }
+
+.color-content-container.float-top .color-seperator {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 6em;
+  right: 0;
+}
+
+.color-content-container.float-top p {
+  margin-top: 5em;
+}
+
 
 .color-content-container p {
   color: #fff;
@@ -367,6 +444,7 @@ nav a:not(.home):hover {
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
   transition: all 0.2s;
 }
+
 /*whitespace 3~*/
 
 
@@ -450,6 +528,7 @@ nav a:not(.home):hover {
 
 .main-content-container {
   display: flex;
+  position: relative;
   align-items: center;
   max-width: 950px;
   min-width: 950px;
@@ -467,8 +546,17 @@ nav a:not(.home):hover {
 
 .whitespace-title {
   font-size: 25px;
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1em;
+  right: 0;
   text-align: center;
   color:  #fff;
+}
+
+.paragraph-container {
+  margin-top: 5em;
 }
 
 .whitespace-paragraph {
@@ -482,8 +570,14 @@ nav a:not(.home):hover {
 .whitespace-paragraph a {
   color: #333;
 }
+
 .whitespace-container .seperator {
   width: 20%;
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5em;
+  right: 0;
   background-color: #3498db;
 }
 
@@ -555,14 +649,14 @@ nav a:not(.home):hover {
 .text-section-container {
   max-width: 100%;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   text-align: justify;
 }
 
+
 .text-section {
   max-width: 25%;
-  margin: 0 2em;
+  margin: 5.5em 2em;
 }
 
 .text-section h1 {
@@ -583,7 +677,7 @@ nav a:not(.home):hover {
 
 .text-graphic {
   min-width: 600px;
-  height: 300px;
+  height: 400px;
   background-position: center;
   background-size: cover;
 }
@@ -600,17 +694,6 @@ nav a:not(.home):hover {
 /*text-section~*/
 
 /*contact form*/
-.floating-icon {
-  position: fixed;
-  top: 200;
-  right: 0;
-  width: 75px;
-  height: 75px;
-  background-color: #444;
-}
-
-
-
 .contact-form-container {
   width: 100%;
   background-color: #fff;
@@ -625,7 +708,7 @@ nav a:not(.home):hover {
 
 
 .contact-form-container form h1 {
-    color: #16a085;
+    color: #16a091;
     font-size: 40px;
 }
 
@@ -639,10 +722,10 @@ nav a:not(.home):hover {
   min-width: 40vw;
   max-width: 100%;
   margin: 20px;
+  padding-left: 20px;
   color: #fff;
-  background-color: #3498db;
+  background-color: #2079b4;
   box-shadow: 0 1px 1px #ccc;
-  text-align: center;
   border-radius: 5px;
   border: none;
   transition: box-shadow 0.3s;
@@ -658,10 +741,6 @@ nav a:not(.home):hover {
 
 .contact-form-container textarea {
   min-height: 150px;
-}
-
-.contact-form-container textarea:focus {
-  text-align: left;
 }
 
 #submit {
@@ -680,7 +759,6 @@ nav a:not(.home):hover {
 .contact-logo-box {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   width: 500px;
   height: 200px;
   margin-top: 2em;
@@ -695,14 +773,15 @@ nav a:not(.home):hover {
   border-radius: 100%;
   background-position: center;
   background-size: cover;
+  margin: 0 5% 0 5%;
 }
 
 .contact-logo-1 {
-  background-image: url('../../tools/gifs/landing-page.gif');
+  background-image: url('../../tools/gifs/telephone.gif');
 }
 
 .contact-logo-2 {
-  background-image: url('../../tools/gifs/landing-page.gif');
+  background-image: url('../../tools/gifs/reception-bell.gif');
 }
 
 .contact-logo-text h1{
@@ -719,13 +798,14 @@ nav a:not(.home):hover {
 
 .contact-logo-text h2, .contact-logo-text a {
   color: #2980b9;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .contact-logo-text button {
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   color: #fff;
+  font-size: 40px;
   box-shadow: 0 1px 1px #ccc;
   border-radius: 5px;
   background-color: #16a085;
@@ -738,14 +818,13 @@ nav a:not(.home):hover {
   background-color: #1abc9c;
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
-
 /*contact form~*/
 
 
 
 /*footer*/
 footer {
-  min-height: 425px;
+  min-height: 400px;
   background-color: #1f1f1f;
   color: #aaa;
   display: flex;
@@ -757,7 +836,7 @@ footer {
 
 footer a {
   color: #ddd;
-  font-size: 18px;
+  font-size: 20px;
   transition: all 0.3s;
 }
 
@@ -784,6 +863,12 @@ footer a:hover{
   padding: 0 5px;
 }
 
+.footer-contact a {
+  margin: 10px;
+  font-size: 23px;
+}
+
+
 .footer-location h1 {
   color: #fff;
   font-size: 25px;
@@ -791,12 +876,6 @@ footer a:hover{
   padding: 10px 0;
 }
 
-.footer-location h2 {
-  color: #fff;
-  font-weight: 100;
-  font-size: 18px;
-  margin: 0 20%;
-}
 
 footer hr {
   width: 50%;
@@ -985,6 +1064,10 @@ footer .policies a:hover{
   margin: 1em 0;
   font-size: 23px;
 }
+
+.why-the-ppcgroup-box-5 span {
+  margin-left: 4em;
+}
 /*why theppcgroup~*/
 
 
@@ -993,6 +1076,86 @@ footer .policies a:hover{
 
 
 
+
+
+
+
+
+
+
+
+/*privacy policy*/
+.legal-info {
+    padding: 6em 20%;
+    background-color: #f6f6f6;
+}
+
+.legal-info h1 {
+  color: #003F83;
+  margin: 1em 0;
+}
+
+.legal-info p {
+  text-align: justify;
+}
+
+.legal-info h3 {
+  color: #004C8F;
+  margin: 2em 0;
+}
+
+
+
+
+/*privacy policy~*/
+
+
+
+/*thank you*/
+.thank-you {
+  height: 100%;
+  background-image: radial-gradient(#2980b9, #004C8F);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you h1 {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 0 5px 2px #444;
+}
+
+.thank-you h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 0 5px 2px #444;
+}
+
+.thank-you button {
+  min-height: 50px;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0 1px 1px #444;
+  border-radius: 5px;
+  background-color: #2980b9;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.thank-you button:hover {
+  background-color: #3498db;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+}
+
+
+/*thank you~*/
 
 
 
@@ -1075,6 +1238,7 @@ footer .policies a:hover{
 
   .link-container {
     position: fixed;
+    display: block;
     top: 0;
     right: 0;
     background-color: #f6f6f6;
@@ -1112,6 +1276,7 @@ footer .policies a:hover{
 .main-color-container li {
   display: block;
   max-width: 100%;
+  cursor: pointer;
   margin: 2em;
 }
 
@@ -1202,6 +1367,10 @@ footer .policies a:hover{
 
 @media (max-width: 768px) {
 /*banner*/
+.banner {
+  background-image: url('../../tools/images/Up to the Sky - Cropped for Mobile-2.jpg');
+}
+
 .ppc-catch-phrase {
   display: block;
   text-align: center;
@@ -1249,6 +1418,9 @@ footer .policies a:hover{
 
 @media (max-width: 480px) {
 /*banner*/
+
+
+
 .ppc-catch-phrase h1 {
   font-size: 25px;
 }
@@ -1278,12 +1450,6 @@ footer .policies a:hover{
   }
 /*animated logo~*/
 
-/*contact form*/
-.floating-icon {
-  display: none;
-}
-/*contact form~*/
-
 /*footer*/
 footer a {
   padding: 10px 0;
@@ -1303,6 +1469,21 @@ footer a {
   text-align: left;
 }
 /*who we serve~*/
+
+/*thank you*/
+.thank-you h1 {
+  margin: 1em 0;
+  font-size: 30px;
+}
+
+.thank-you h2 {
+  font-size: 20px;
+}
+
+.thank-you a {
+  width: 90%;
+}
+/*thank you~*/
 }
 
 /*media queries~*/

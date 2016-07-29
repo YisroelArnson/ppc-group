@@ -4,25 +4,56 @@ $(function() {
   checkContent();
   catchPhrase();
   smoothScroll();
-
   if ( $(window).width() > 739) {
     //Add your javascript for large screens here
   }
   else {
-    //Add your javascript for small screens here
+    mobileStart();
     pass = 1;
+
+
   }
 });
 
 
 
+function mobileStart() {
+  $('a.start').on('click', function() {
+    var oldHref = $(this).attr('href');
+    $(this).attr('href', oldHref + '#start');
+  });
+}
+
+
+
+
 function mobileNav() {
   var $linkContainer = $('.link-container');
+  var $dropContent = $linkContainer.find('.dropdown-content a');
   var $x = $('.x');
+  var $free = $('.free');
 
-  $x.click(function() {
+  $x.on('click', function() {
     $linkContainer.toggleClass('nav-open');
   });
+
+  $dropContent.on('click', function() {
+    $linkContainer.toggleClass('nav-open');
+  });
+
+  $
+
+  if ( $(window).width() > 1024) {
+    setInterval(function() {
+      $free.find('div').toggleClass('blue');
+    }, 6000);
+
+    setInterval(function() {
+      $free.find('div').slideToggle(200);
+    }, 3000);
+  }
+
+
 }
 
 
@@ -162,7 +193,7 @@ function smoothScroll() {
       var hash = this.hash;
 
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: ($(hash).offset().top - 50)
       }, 800, function(){
 
         window.location.hash = hash;
@@ -170,3 +201,51 @@ function smoothScroll() {
     }
   });
 }
+
+
+
+function sendEmail() {
+    var form = $('#ajax-contact');
+    var formMessages = $('#form-messages');
+    var formData = $(form).serialize();
+
+
+    $(form).submit(function(event) {
+        event.preventDefault();
+    });
+
+    $.ajax({
+      type: 'POST',
+      url: $(form).attr('action'),
+      data: formData
+    })
+
+    .done(function(response) {
+      $(formMessages).removeClass('error');
+      $(formMessages).addClass('success');
+
+      $(formMessages).text(response);
+      $('#name').val('');
+      $('#email').val('');
+      $('#tel').val('');
+      $('#time').val('');
+      $('#method').val('');
+      $('#message').val('');
+      location.assign("http://www.theppcgroup.com/thank-you.html");
+    })
+
+    .fail(function(data) {
+      $(formMessages).removeClass('success');
+      $(formMessages).addClass('error');
+
+      if (data.responseText !== '') {
+          $(formMessages).text(data.responseText);
+      } else {
+          $(formMessages).text('Oops! An error occured and your message could not be sent.');
+      }
+    });
+  }
+
+if ($('#submit').on('click', function() {
+  sendEmail();
+}));
