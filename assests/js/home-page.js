@@ -4,8 +4,8 @@ $(function() {
   checkContent();
   catchPhrase();
   smoothScroll();
-  if ( $(window).width() > 739) {
-    //Add your javascript for large screens here
+  if ( $(window).width() > 1200) {
+    animatedText();
   }
   else {
     mobileStart();
@@ -173,6 +173,69 @@ function catchPhrase() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function animatedText() {
+  var $animatedTextBox = $('.animated-text');
+  var $animatedAnimation = $('.animated-text-animation');
+
+  $('.animated-text-content').css('display', 'none');
+  $animatedTextBox.on('mouseenter', function() {
+    $(this).find('.animated-text-animation').css('justify-content', 'flex-start');
+    $(this).find($('.animated-text-content')).delay(600).fadeIn(800);
+  });
+
+
+  $animatedTextBox.on('mouseleave', function() {
+    $(this).find('.animated-text-animation').css('justify-content', 'center');
+    $(this).find($('.animated-text-content')).fadeOut(250);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

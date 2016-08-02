@@ -10,7 +10,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: rgba(246, 246, 246, 0.8);
   box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
@@ -631,7 +631,7 @@ nav a:not(.home):hover {
   min-width: 100%;
   min-height: 400px;
   padding: 2em 0;
-  background-color: #f6f6f6;
+  background-color: #f9f9f9;
   box-shadow: 0 2px 9px rgba(0,0,0,.9),0 2px 6px rgba(0,0,0,.9);
 }
 
@@ -687,7 +687,7 @@ nav a:not(.home):hover {
 }
 
 .display-advertising-graphic {
-  background-image: url('../../tools/images/Display 04.jpg');
+  background-image: url('../../tools/images/Main File 03.jpg');
 }
 
 
@@ -724,6 +724,7 @@ nav a:not(.home):hover {
   margin: 20px;
   padding-left: 20px;
   color: #fff;
+  font-size: 18px;
   background-color: #2079b4;
   box-shadow: 0 1px 1px #ccc;
   border-radius: 5px;
@@ -835,17 +836,16 @@ footer {
 }
 
 footer a {
-  color: #ddd;
+  color: #fff;
   font-size: 20px;
   transition: all 0.3s;
 }
 
-footer a:hover{
+.footer-nav a:hover{
   color: #3498db;
 }
 
 .footer-title {
-  color: #fff;
   font-size: 18px;
 }
 
@@ -863,11 +863,39 @@ footer a:hover{
   padding: 0 5px;
 }
 
+.footer-links {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.footer-links h1 {
+  font-size: 20px;
+  color: #3498db;
+  text-align: left;
+  margin: 20px 10px 0 10px;
+}
+
+.footer-links h1:hover {
+  text-decoration: underline;
+}
+
+.footer-links li {
+  font-size: 16px;
+  text-align: left;
+  margin-left: 30px;
+  list-style-type: disc;
+  transition: all 0.3s;
+}
+
+.footer-links li:hover {
+  color: #3498db;
+}
+
 .footer-contact a {
   margin: 10px;
   font-size: 23px;
 }
-
 
 .footer-location h1 {
   color: #fff;
@@ -923,11 +951,13 @@ footer .policies a:hover{
 
 
 .who-we-serve-title {
-    min-height: 200px;
+    min-height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid #555;
+    align-items: center;
+    background-image: radial-gradient(#2980b9, #004C8F);
+    color: #fff;
 }
 
 .who-we-serve-title h1 {
@@ -944,16 +974,6 @@ footer .policies a:hover{
 
 .who-we-serve-box {
   text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2em 10%;
-  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
-
-}
-
-.who-we-serve-box h1 {
-  font-size: 30px;
 }
 
 .who-we-serve-box p {
@@ -961,22 +981,190 @@ footer .policies a:hover{
 }
 
 .who-we-serve-box-1 {
-  background-image: radial-gradient(#2980b9, #004C8F);
-  color: #fff;
+  min-height: 700px;
+  background-color: #f8f8f8;
 }
+
+.who-we-serve-box-1 h2 {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 30px;
+}
+
+
+.floating-box {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.floating-p {
+  display: inline-block;
+  width: 25%;
+  min-height: 450px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+  transition: all 0.2s;
+}
+
+.floating-p:hover {
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.floating-p:hover .floating-top {
+  padding: 25px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+}
+
+.floating-p p {
+    padding: 1em 1em 0 1em;
+}
+
+.floating-top {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.floating-p-2 {
+  margin-top: 7em;
+}
+
+.floating-p-3 {
+  margin-top: 14em;
+}
+
+.floating-p-1 .floating-top{
+  background-color: #3498db;
+}
+
+.floating-p-2 .floating-top {
+  background-color: #2ecc71;
+
+}
+
+.floating-p-3 .floating-top {
+  background-color: #e74c3c;
+}
+
+
 
 .who-we-serve-box-2 {
-    font-size: 25px;
+    font-size: 23px;
+    padding: 30px 0;
+    background-image: url('../../tools/images/website-design-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.who-we-serve-box-2 p {
-  margin-left: 8%;
+.who-we-serve-box-2 h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  width: 60%;
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 4px 6px rgba(0,0,0,.16),2px 4px 6px rgba(0,0,0,.23);
 }
+
+.bevel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  min-height: 250px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin: 2em auto;
+  padding: 1em;
+  font-size: 26px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,.16),2px 4px 6px rgba(0,0,0,.23);
+  transition: all 0.4s;
+}
+
+.bevel:hover {
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.bevel .who-we-serve-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.bevel .who-we-serve-logo-1 {
+  background-image: url('../../tools/gifs/help.svg');
+}
+
+.bevel .who-we-serve-logo-2 {
+  background-image: url('../../tools/gifs/clock.svg');
+}
+
+.bevel .who-we-serve-logo-3 {
+  background-image: url('../../tools/gifs/thief.svg');
+}
+
+.bevel .who-we-serve-content-container {
+  width: 70%;
+  margin-left: 100px;
+}
+
+.fix-indent {
+  display: flex;
+}
+
+.fix-indent span {
+    margin: 0 10px;
+}
+
+.fix-indent-p {
+  font-size: 22px;
+  margin-left: 55px;
+}
+
+
+
+
 
 .who-we-serve-box-3 {
-  min-height: 250px;
-  background-image: radial-gradient(#2980b9, #004C8F);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6f6f6;
+  min-height: 500px;
+}
+
+.who-we-serve-box-3-content {
+  width: 40%;
+  font-size: 25px;
+}
+
+.who-we-serve-box-3-image {
+  width: 45%;
+  height: 450px;
+  background-image: url('../../tools/images/iStock_89127459_XXXLARGE - Website Evaluation.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.who-we-serve-box-4 {
+  padding: 2em 15%;
   color: #fff;
+  background-image: radial-gradient(#2980b9, #004C8F);
+  text-align: justify;
+  font-size: 20px;
 }
 /*who we serve~*/
 
@@ -991,8 +1179,17 @@ footer .policies a:hover{
 }
 
 .why-the-ppcgroup-title {
+  background-color: #3498db;
+  padding: 20px 0;
   text-align: center;
-  padding-top: 2em;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.lifted-box:hover .why-the-ppcgroup-title {
+  padding: 30px 0;
+  background-color: #2ecc71;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
 }
 
 .why-the-ppcgroup-title hr {
@@ -1001,72 +1198,177 @@ footer .policies a:hover{
 
 .why-the-ppcgroup h1 {
   font-size: 25px;
-  text-align: center;
 }
 
 .why-the-ppcgroup p {
   font-size: 25px;
-  padding: 2em 10%;
-}
-
-.why-the-ppcgroup-box-1 {
-  padding: 0 10%;
 }
 
 .why-the-ppcgroup-box-1 p {
   text-align: justify;
 }
 
+.why-the-ppcgroup-box .lifted-box {
+  width: 50%;
+  margin: 20px auto;
+  font-size: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16),0 2px 6px rgba(0,0,0,.23);
+  transition: all 0.5s;
+}
+
+.lifted-box:hover {
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.lifted-box p {
+  margin: 20px 20px;
+  padding: 50px 30px;
+}
+
+
 .why-the-ppcgroup-box-2 {
-  padding: 1em 5%;
-  text-align: justify;
-  color: #fff;
-  background-image: radial-gradient(#2980b9, #004C8F);
+  min-height: 500px;
+}
+
+.animated-text-container {
+  display: flex;
+}
+
+.animated-text {
+  min-width: 33.333%;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.7s ease-in-out;
+}
+
+.animated-text-1 {
+  background-image: url('../../tools/images/iStock_25700824_XXXLARGE - Reporting Section.jpg');
+}
+
+.animated-text-2 {
+  background-image: url('../../tools/images/website-design-2.jpg');
+}
+
+.animated-text-3 {
+  background-image: url('../../tools/images/display-ad-edit-1.jpg');
+  background-position: right;
 }
 
 
-
-.bullet-point-container {
+.animated-text-animation {
+    min-width: 50%;
+    min-height: 550px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    margin: 2em 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 4px 6px rgba(0,0,0,.16),2px 4px 6px rgba(0,0,0,.23);
+    transition: all 1s ease-in-out;
 }
 
-.bullet-point-container li {
-  font-size: 20px;
-  margin: 1em 10px;
-  list-style-type: circle;
+.animated-text:hover .animated-text-animation {
+  flex: 1 1 40%;
 }
 
-.why-the-ppcgroup-box-3 {
-  padding: 1em 10%;
+.animated-text:hover {
+    min-width: 50%;
 }
 
-.why-the-ppcgroup-box-3 li {
-    font-size: 25px;
-    line-height: 1;
-    margin: 1em 0;;
+.animated-text-container:hover .animated-text:not(:hover) {
+  min-width: 25%;
 }
 
-.why-the-ppcgroup-box-3 h3 {
+.logo-title {
+  color: #fff;
   text-align: center;
 }
 
+
+.animated-text .animated-text-logo {
+  min-width: 150px;
+  height: 150px;
+  margin: 0 20px;
+  background-position: center;
+  border-radius: 100%;
+}
+
+.animated-text-logo-1 {
+  background-image: url('../../tools/gifs/30-day.jpg');
+  background-size: cover;
+}
+
+.animated-text-logo-2 {
+  background-image: url('../../tools/gifs/HiRes-1.jpg');
+}
+
+.animated-text-logo-3 {
+  background-image: url('../../tools/gifs/74402217_thumbnail.jpg');
+}
+
+.animated-text-content {
+  color: #fff;
+  max-width: 70%;
+}
+
+.animated-text-content h1 {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.li-container {
+  display: flex;
+}
+
+.li-structure {
+  display: flex;
+}
+
+.animated-text-content li {
+  list-style-type: disc;
+  color: #3498db;
+  font-size: 18px;
+  margin: 10px 0 10px 30px;
+}
+
+.animated-text-content span {
+  color: #fff;
+  margin: 10px 0;
+}
+
+
+.why-the-ppcgroup-box-3 {
+  background-color: #f8f8f8;
+  padding: 40px;
+  display: flex;
+}
+
+.why-the-ppcgroup-box-3 h1 {
+  text-align: left;
+  font-size: 30px;
+}
+
+.why-the-ppcgroup-box-3-content {
+  width: 50%;
+}
+
+.why-the-ppcgroup-box-3-image {
+  width: 50%;
+  height: 550px;
+  background-image: url('../../tools/images/iStock_89127459_XXXLARGE - Website Evaluation.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .why-the-ppcgroup-box-4 {
-  padding: 1em 20%;
+  padding: 2em 15%;
   color: #fff;
   background-image: radial-gradient(#2980b9, #004C8F);
-}
-
-.why-the-ppcgroup-box-4 li {
-  list-style-type: square;
-  margin: 1em 0;
-  font-size: 23px;
-}
-
-.why-the-ppcgroup-box-5 span {
-  margin-left: 4em;
+  text-align: justify;
+  font-size: 20px;
 }
 /*why theppcgroup~*/
 
@@ -1164,6 +1466,7 @@ footer .policies a:hover{
 
 /*media queries*/
 @media (max-width: 1500px) {
+/*text section*/
   .text-section h1 {
     font-size: 20px;
   }
@@ -1171,7 +1474,20 @@ footer .policies a:hover{
   .text-section p {
     font-size: 12px;
   }
+/*text section~*/
 
+/*who we serve*/
+  .floating-box {
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .floating-p {
+    width: 75%;
+    min-height: 300px;
+    margin: 20px 0;
+  }
+/*who we serve~*/
 }
 
 
@@ -1227,6 +1543,62 @@ footer .policies a:hover{
   text-align: center;
 }
 /*contact-form~*/
+
+/*who we serve*/
+  .who-we-serve-box-3 {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 500px;
+  }
+
+  .who-we-serve-box-3-content {
+    width: 80%;
+  }
+
+  .who-we-serve-box-3-image {
+    width: 100%;
+  }
+/*who we serve ~*/
+
+/*why the ppcgroup*/
+.why-the-ppcgroup-box .lifted-box {
+  width: 85%;
+  font-size: 20px;
+}
+
+.animated-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-text {
+  min-height: 400px;
+}
+
+.animated-text-animation {
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.animated-text-content {
+  max-width: 80%;
+}
+
+
+.why-the-ppcgroup-box-3 {
+  padding: 0;
+  flex-direction: column-reverse;
+}
+
+.why-the-ppcgroup-box-3-content {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.why-the-ppcgroup-box-3-image {
+  width: 100%;
+}
+/*why the ppcgroup~*/
 }
 
 @media (max-width: 1024px) {
@@ -1352,16 +1724,15 @@ footer .policies a:hover{
 }
 /*whitespace 3~*/
 
-/*why-the-ppcgroup*/
-.why-the-ppcgroup-box-1 p {
-  text-align: left;
-}
+/*who we serve*/
+  .bevel {
+    width: 90%;
+    min-height: 250px;
+    margin: 20px auto;
+    text-align: left;
+  }
 
-.why-the-ppcgroup-box-2 {
-  text-align: left;
-}
-
-/*why-the-ppcgroup~*/
+/*who we serve*/
 }
 
 
@@ -1389,6 +1760,7 @@ footer .policies a:hover{
 /*contact form*/
 .contact-form-container input, .contact-form-container textarea {
   min-width: 90vw;
+  font-size: 14px;
 }
 
 .contact-logo-box {
@@ -1413,14 +1785,38 @@ footer .policies a:hover{
 }
 /*contact form~*/
 
+/*who we serve*/
+  .who-we-serve-box-2 h2 {
+    width: 90%;
+  }
+  .bevel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .bevel .who-we-serve-content-container {
+    margin: 0;
+  }
+/*who we serve*/
+/*why the pppcgroup*/
+.animated-text-animation {
+    flex-direction: column;
+}
+
+.animated-text-content h1 {
+  text-align: center;
+}
+
+.why-the-ppcgroup-box-4 {
+  padding: 30px;
+}
+/*why the ppcgroup~*/
 }
 
 @media (max-width: 480px) {
 /*banner*/
-
-
-
 .ppc-catch-phrase h1 {
   font-size: 25px;
 }
@@ -1467,6 +1863,10 @@ footer a {
 /*who we serve*/
 .who-we-serve-box {
   text-align: left;
+}
+
+.floating-p {
+  width: 95%;
 }
 /*who we serve~*/
 
