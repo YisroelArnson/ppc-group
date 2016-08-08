@@ -99,7 +99,7 @@ function color1() {
     colorInterval = setInterval(function() {
       if (pass > 0) {
         clearInterval(colorInterval);
-        return; //stop here so that it doesn't continue to execute below code
+        return;
       }
 
       $($colorContent).fadeOut(0);
@@ -133,6 +133,7 @@ function checkContent() {
     var $gif = '.whitespace-gif';
 
     var animationSpeed = 600;
+
     $($buttons).on('click', function() {
       var $this = $(this);
       var $secondClass = $this.attr("class").split(' ');
