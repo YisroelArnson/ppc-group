@@ -10,8 +10,9 @@ $(function() {
   else {
     mobileStart();
     pass = 1;
-
-
+    changePass1 = 1;
+    changePass2 = 1;
+    changePass3 = 1;
   }
 });
 
@@ -126,14 +127,14 @@ function color1() {
 
 
 
+var changePass1 = 0;
+var changePass2 = 0;
+var changePass3 = 0;
 function checkContent() {
     var $buttons = '.whitespace-container .button';
     var $content = '.whitespace-container .content';
     var $gif = '.whitespace-gif';
 
-    var changePass1 = 0;
-    var changePass2 = 0;
-    var changePass3 = 0;
     var timeBetween = 5000;
     var animationSpeed = 600;
     var contentInterval1;
@@ -256,7 +257,7 @@ function checkContent() {
         $($parent + $content + '-container-' + counter3).fadeIn(animationSpeed);
         ++counter3;
 
-        if (counter3 === 15) {
+        if (counter3 === 16) {
           counter3 = 10;
         }
       }, timeBetween);
@@ -422,9 +423,9 @@ function sendEmail() {
       $(formMessages).addClass('error');
 
       if (data.responseText !== '') {
-          $(formMessages).text(data.responseText);
+          $(formMessages).fadeIn(800).text(data.responseText);
       } else {
-          $(formMessages).text('Oops! An error occured and your message could not be sent.');
+          $(formMessages).fadeIn(800).text('Oops! An error occured and your message could not be sent.');
       }
     });
   }
