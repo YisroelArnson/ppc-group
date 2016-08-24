@@ -109,48 +109,121 @@ nav a:not(.home):hover {
 
 
 /*banner*/
-.banner {
+.banner-container {
   max-width: 100%;
-  min-height: 625px;
-  background-image: url('../../tools/images/UA PPC EDIT-4.jpg');
+  padding-top: 100px;
+}
+
+.banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-section {
+  width: 33.333%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-section-2 {
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-logo {
+  width: 600px;
+  height: 150px;
+  background-image: url('../../tools/images/sca_FO7B597C1DE7_mod_888__FN.svg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  color: #fff;
 }
 
-.ppc-catch-phrase-container {
-  position:relative;
-  width: 70%;
-  min-height:525px;
+.image-seperator {
+      width: 300px;
+      border-bottom: 1px solid rgba(218, 218, 218, 1);
+      height: 0;
+      min-height: 0;
 }
 
-.ppc-catch-phrase {
-  position:absolute;
-  width: 70%;
-  padding: 250px 0 0 50px;
-  left:0;
-  top:0;
+.upward-arrow {
+  margin-top: 140px;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  transform: rotate(20deg);
+  background-image: url('../../tools/images/upward-arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.ppc-catch-phrase:not(:first-child) {
-  display: none;
-}
-
-.ppc-catch-phrase h1 {
-  font-size: 30px;
-  text-shadow: 0 3px 1px #666;
-}
-
-.catch-phrase-1 h1 {
-  font-size: 45px;
-}
-
-#padding-left {
-  padding-left: 150px;
-}
-
-.center-phrase {
+.top-section-3 h1 {
+  color: #2B2B2B;
+  font-weight: 100;
+  margin: 20px 20px -75px -210px;
   text-align: center;
+  font-size: 80px;
+  line-height: 1.5;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.banner-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-section {
+  text-align: center;
+  color: #1E73D4;
+  width: 350px;
+  margin-top: 75px;
+}
+
+.bottom-section-5 {
+  margin-left: 25px;
+}
+
+.bottom-section h1 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.bottom-section h2 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.lets-talk {
+  width: 250px;
+  padding: 15px 0;
+  font-size: 38px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(61, 155, 233, 1);
+  border: solid rgba(43, 104, 156, 1) 4px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.lets-talk:hover {
+  background-color: rgba(61, 155, 233, 0.6);
+}
+
+.bottom-section-2, .bottom-section-4 {
+  width: 200;
+  display: flex;
+}
+
+.bottom-section-circles {
+  width: 20px;
+  height: 20px;
+  margin: 0 15px;
+  display: none;
+  border-radius: 100%;
+  background-color: #002e5d;
 }
 /*banner*/
 

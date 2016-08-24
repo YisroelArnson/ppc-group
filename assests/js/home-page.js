@@ -1,5 +1,6 @@
 $(function() {
   mobileNav();
+  dots();
   color1();
   checkContent();
   catchPhrase();
@@ -56,6 +57,48 @@ function mobileNav() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+function dots() {
+    var $dots = '.bottom-section-circles';
+    var counter = 0;
+
+    var dotInterval = setInterval(function() {
+      $($dots + ':eq(' + counter + ')').fadeIn(300);
+      ++counter
+      if (counter === 6) {
+        counter = 0;
+        clearInterval(dotInterval);
+        continueDots();
+      }
+    }, 300);
+
+    function continueDots() {
+      setInterval(function() {
+        $($dots + ':eq(' + counter + ')').animate({marginTop: '-20px'}, 400);
+        $($dots + ':eq(' + counter + ')').animate({marginTop: '0'}, 400);
+
+        ++counter
+
+        if (counter === 6) {
+          counter = 0;
+        }
+      }, 300);
+    }
+}
+
+
+
+
+
 
 
 
